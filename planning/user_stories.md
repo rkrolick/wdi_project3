@@ -47,7 +47,7 @@ As a user,
 
 
     Objective by System: (all notes will include consults)
-      :Neuro 
+      :Neuro
       LOC/Mental status (AAOx3), GCS (if icu)
         notes: pupils, reflexes, Activity, restraints, procedures
       :Cardiovascular:
@@ -80,8 +80,8 @@ As a user,
         edema
         PT
 
-Assess ment and Plan
+Assessment and Plan
 
 
-* I can see pertinent information, and tehn expand to see that total information
+* I can see pertinent information, and then expand to see that total information
 * I can click something that takes me to a printable version, showing all patients and pertinent info in a table.
