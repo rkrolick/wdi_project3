@@ -32,7 +32,7 @@ As a user,
       - occupation
 
 
-  Assessment:
+    Objective General:
     - Vital signs: O2 sat, RR, HR, BP, T
     - Labs: skeletons for cbc, bmp, lft and pt/ptt/inr and OTHER (cardiac enzymes (troponin trends), etc) with options to trend values.
         -- and other as a text string
@@ -45,7 +45,7 @@ As a user,
 
 
 
-    Objective by System: (all notes will include consults)
+    Objective by System: (all "notes" will include consults)
       Neuro: LOC/Mental status (AAOx3), GCS (if icu)
         notes: pupils, reflexes, Activity, restraints, procedures
       Cardiovascular:
@@ -77,14 +77,14 @@ As a user,
         decubitis ulcers?
         edema
         PT
-    IV's and Lines
+    IV's / Lines / catheters / drains
       1.
       2..
       3.
       4.
 
-Assess ment and Plan
+Assessment and Plan
 
 
-* I can see pertinent information, and tehn expand to see that total information
+* I can see pertinent information, and then expand to see that total information
 * I can click something that takes me to a printable version, showing all patients and pertinent info in a table.
