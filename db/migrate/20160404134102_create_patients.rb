@@ -13,15 +13,14 @@ class CreatePatients < ActiveRecord::Migration
       t.string :diet
       t.string :nextOfKin
       t.string :nextOfKinPhoneNumber
-      t.string :isoloation
+      t.string :isolation
       t.text :pmh
       t.text :homeMeds
       t.text :surgicalHx
       t.string :familyHistory
-      t.string :socialHistory
-      t.string :smoking
-      t.string :alcohol
-      t.string :drugs
+      t.boolean :smoking
+      t.boolean :alcohol
+      t.boolean :drugs
       t.string :psychHx
       t.string :occupation
 
