@@ -2,7 +2,7 @@
 
 (function(){
   angular
-  .module("patients")
+  .module("handOff")
   .factory("patientFactory", [
     "$resource",
     patientFactoryFunction
