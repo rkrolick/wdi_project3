@@ -10,8 +10,5 @@ Rails.application.config.assets.version = '1.0'
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 Rails.application.config.assets.precompile += %w( app.js )
 Rails.application.config.assets.precompile += %w( application.js )
-Rails.application.config.assets.precompile += %w( index.controller.js )
 Rails.application.config.assets.precompile += %w( patient.factory.js )
-Rails.application.config.assets.precompile += %w( patients.controller.js )
-Rails.application.config.assets.precompile += %w( patients.js )
-Rails.application.config.assets.precompile += %w( show.controller.js )
+Rails.application.config.assets.precompile += %w( patient.index.controller.js )

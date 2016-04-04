@@ -3,12 +3,12 @@
 (function(){
   angular
   .module("handOff")
-  .factory("patientFactory", [
+  .factory("PatientFactory", [
     "$resource",
-    patientFactoryFunction
+    PatientFactoryFunction
   ]);
 
-  function patientFactoryFunction($resource){
+  function PatientFactoryFunction($resource){
     return $resource("http://localhost:3000/patients/:id", {}, {
       update: {method: "PUT"}
     });

@@ -15,8 +15,8 @@
     .state("patientIndex", {
       url: "/patients",
       templateUrl: "app/views/patients/index.html.erb",
-      controller: "patientController",
-      controllerAs: "patientController"
+      controller: "PatientIndexController",
+      controllerAs: "vm"
     })
   }
 }());
