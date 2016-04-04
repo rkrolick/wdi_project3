@@ -3,7 +3,7 @@
 
 (function(){
   angular
-  .module("handOff",["ui.router","patient"])
+  .module("handOff",["ngResource","ui.router","patients.module"])
   .config(["$stateProvider",RouterFunction]);
 
   function RouterFunction($stateProvider){
