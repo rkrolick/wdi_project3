@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  resources :patients
+  resources :patients, only: [:index]
   root to: redirect('/patients')
 end

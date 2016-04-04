@@ -1,7 +1,12 @@
+//= require angular
+//= require angular-resource
+//= require angular-ui-router.min
+
 "use strict";
 
 (function(){
-  angular.module("handOff",[
+  angular
+  .module("handOff",[
     "ngResource",
     "ui.router"
   ])
@@ -19,4 +24,4 @@
       controllerAs: "vm"
     })
   }
-}());
+})();
