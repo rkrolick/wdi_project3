@@ -75,6 +75,31 @@ mohammed = Patient.create({
     occupation: "Bitch"
     })
 
+    butters = Patient.create({
+    firstName: "Leopold Butters",
+    lastName: "Stotch",
+    mrn: 4,
+    attendingName: "Dr. Doctor",
+    roomNumber: "200",
+    codeStatus: "Full",
+    dob: "9-11-2001",
+    age: 10,
+    allergies: "almond",
+    diet: "normal",
+    nextOfKin: "Stephen Stotch",
+    nextOfKinPhoneNumber: "555-COF-FEE"
+    isolation: "none",
+    pmh: [4, 7, 10],
+    homeMeds: [65,93]
+    surgicalHx: "none"
+    familyHistory: "none",
+    smoking: false,
+    alcohol: false,
+    drugs: false,
+    psychHx: 'none',
+    occupation: "student",
+    })
+
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
