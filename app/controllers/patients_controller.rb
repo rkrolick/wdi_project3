@@ -5,6 +5,11 @@ class PatientsController < ApplicationController
       format.json{ render json: Patient.all }
     end
   end
+  def show
+    @patient = Patient.find(params[:id])
+    render json: @patient.to_json, status: :ok
+  end
+
   def destroy
     Patient.destroy(params[:id])
     render json: {success: true}, status: :ok
