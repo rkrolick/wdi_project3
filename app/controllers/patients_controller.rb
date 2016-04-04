@@ -12,6 +12,24 @@ class PatientsController < ApplicationController
     render json: @patient.to_json, status: :ok
   end
 
+  def create
+    @patient = Patient.new(patient_params)
+    if @patient.save
+      render json: @patient.to_json, status: :created
+    else
+      render json: @patient.errors, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    @patient = Patient.find(params[:id])
+    if @patient.update(patient_params)
+      render json: @patient.to_json, status: :created
+    else
+      render json: @patient.errors, status: :unprocessable_entity
+    end
+  end
+
   private
   def patient_params
     params.require(:patient).permit(

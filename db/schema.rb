@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 20160404175625) do
     t.string   "edema"
     t.string   "pt"
     t.string   "skinNotes"
+    t.string   "assessmentPlan"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.integer  "patient_id"
