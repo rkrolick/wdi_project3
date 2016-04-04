@@ -3,7 +3,7 @@
 (function(){
   angular.module("handOff",[
     "ngResource",
-    "ui.router",
+    "ui.router"
   ])
   .config([
     "$stateProvider",
