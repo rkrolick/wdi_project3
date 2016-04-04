@@ -1,5 +1,3 @@
-//=require angular
-//= require angular-resource
 
 "use strict";
 
@@ -10,17 +8,15 @@
   PatientController.$inject = ["$resource"]
   function PatientControllerFunction($resource){
     var vm = this;
-    var Patient = $resource("/patients/:id.json", {}, {
+    vm.patients = $resource("/patients.json", {}, {
       update: {method: 'PUT'}
     });
-    vm.data= Patient.query(function(response){
-    });
-    vm.destroy = function(patient_index){
-      var patient = vm.data[patient_index];
-      Patient.remove({id: patient.id}, function(response){
-        if(response.success) vm.data.splice(patient_index, 1);
-      });
-    }
+    // vm.destroy = function(patient_index){
+    //   var patient = vm.data[patient_index];
+    //   Patient.remove({id: patient.id}, function(response){
+    //     if(response.success) vm.data.splice(patient_index, 1);
+    //   });
+    // }
     vm.new_patient = {};
     vm.create = function(){
       Patient.save(vm.new_patient, function(response){
