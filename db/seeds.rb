@@ -100,7 +100,76 @@ mohammed = Patient.create({
     occupation: "student",
     })
 
+mohammed.visit.create({
+  imaging: "CXR showed consolidation right lung susp for pneumonia",
+  otherProcedures: "Chest CT scheduled tomorrow 4-5",
+   chiefComplaint: "S.O.B. with productive cough and fever for one week",
+   loc: "AAOx3",
+   gcs: null,
+   neuroNotes: null,
+   rhythm: "NL Sinus Rhythm",
+   ejectionFraction: null,
+   cardioNotes: null,
+   ventSettings: null,
+   abg: "7.35/45/90/24/99%",
+   pulmonaryNotes: "Pt respirating well ",
+   npo: false,
+   diet: "normal diet as tolerated",
+   tubes: null,
+   giNotes: null,
+   foley: null,
+   foleyPlaceDate: null,
+   renalNotes: null,
+   glucoseSticks: "90,100,140,160,250,145",
+   endoNotes: "Insulin sliding scale monitor glucose q 4 hr",
+   sirsSepsisAlert: "yes",
+   antibiotics: "levaquin",
+   cultures: "sent sputum",
+   idNotes: "patient febrile with leukocytosis "
+   intact: null,
+   woundCare: null,
+   incision: null,
+   decubitisUlcers: null,
+   edema: "none",
+   pt: null,
+   skinNotes: null
+  })
 
+  sheila.visit.create({
+    imaging: "US inconclusive, scheduled for CT today",
+    otherProcedures: "Consider ERCP",
+    chiefComplaint: "acute epigastric abdominal pain worsened by movement after binge drinking over the weekend",
+     loc: "AAOx3",
+     gcs: null,
+     neuroNotes: null,
+     rhythm: null,
+     ejectionFraction: null,
+     cardioNotes: null,
+     ventSettings: null,
+     abg: null,
+     pulmonaryNotes: null,
+     npo: true,
+     diet: "NPO",
+     tubes: null,
+     giNotes: "GI seen today, continue NPO and monitor",
+     foley: null,
+     foleyPlaceDate: null,
+     renalNotes: null,
+     glucoseSticks: null,
+     endoNotes: null,
+     sirsSepsisAlert: null,
+     antibiotics: "Will monitor leukocytosis"
+     cultures: null,
+     idNotes: null,
+     intact: null,
+     woundCare: null,
+     incision: null,
+     decubitisUlcers: null,
+     edema: null,
+     pt: null,
+     skinNotes: null, 
+
+    })
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
