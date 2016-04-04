@@ -31,6 +31,13 @@ class VisitsController < ApplicationController
     end
   end
 
+  def destroy
+    @patient = Patient.find(params[:patient_id])
+    @visit = @patient.visits.find(params[:id])
+    @visit.destroy
+    render json: {status: "success"}, status: :ok
+  end
+
   private
   def visit_params
     params.require(:visit).permit(

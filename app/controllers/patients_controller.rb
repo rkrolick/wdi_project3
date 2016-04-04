@@ -30,6 +30,12 @@ class PatientsController < ApplicationController
     end
   end
 
+  def destroy
+    @patient = Patient.find(params[:id])
+    @patient.destroy
+    render json: {status: "success"}, status: :ok
+  end
+
   private
   def patient_params
     params.require(:patient).permit(
