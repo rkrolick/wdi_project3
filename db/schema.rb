@@ -78,6 +78,10 @@ ActiveRecord::Schema.define(version: 20160404175625) do
     t.string   "skinNotes"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "patient_id"
   end
 
+  add_index "visits", ["patient_id"], name: "index_visits_on_patient_id", using: :btree
+
+  add_foreign_key "visits", "patients"
 end

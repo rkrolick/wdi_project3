@@ -34,6 +34,7 @@ class CreateVisits < ActiveRecord::Migration
       t.string :pt
       t.string :skinNotes
       t.timestamps null: false
+      t.references :patient, index: true, foreign_key: true
     end
   end
 end
