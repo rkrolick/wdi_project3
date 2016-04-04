@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>WdiProject3</title>
+  <script src="https://code.jquery.com/jquery-2.2.2.js" integrity="sha256-4/zUCqiq0kqxhZIyp4G0Gk+AOtCJsY1TA00k5ClsZYE=" crossorigin="anonymous"></script>
   <%= javascript_include_tag 'app', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'patient.index.controller', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'patient.factory', 'data-turbolinks-track' => true %>
@@ -9,7 +10,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body ng-app="handOff">
 
 <%=yield%>
 

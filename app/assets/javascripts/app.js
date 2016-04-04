@@ -17,9 +17,9 @@
 
   function RouterFunction($stateProvider){
     $stateProvider
-    .state("patientIndex", {
-      url: "/patients",
-      templateUrl: "app/views/patients/index.html.erb",
+    .state("Home", {
+      url: "/",
+      templateUrl: "ng-views/homepage.html",
       controller: "PatientIndexController",
       controllerAs: "vm"
     })
