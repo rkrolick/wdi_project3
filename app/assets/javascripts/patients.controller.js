@@ -5,7 +5,7 @@
 
 (function(){
   angular
-  .module("inventory", ["ngResource"])
+  .module("handOff", ["ngResource"])
   .controller("patientController", PatientControllerFunction);
   PatientController.$inject = ["$resource"]
   function PatientControllerFunction($resource){
@@ -14,9 +14,6 @@
       update: {method: 'PUT'}
     });
     vm.data= Patient.query(function(response){
-      vm.data.forEach(function(patient){
-        patient.cost = parseFloat(patient.cost);
-      });
     });
     vm.destroy = function(patient_index){
       var patient = vm.data[patient_index];
