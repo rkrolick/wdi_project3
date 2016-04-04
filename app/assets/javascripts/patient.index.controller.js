@@ -10,6 +10,10 @@
   ]);
 
   function PatientControllerFunction(PatientFactory){
-    this.patients = PatientFactory.query();
-}
+    var vm = this;
+    vm.patients = PatientFactory.query();
+  };
+    $('#activeButton').on('click', function(){
+      console.log(vm.active);
+});
 }());

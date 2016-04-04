@@ -1,4 +1,9 @@
 button {
   width: 200px;
   overflow: hidden;
+  background-color: #2b90d9;
+}
+.middle_container{
+  background-color: #d9e1e8;
+  color: #282c37;
 }
