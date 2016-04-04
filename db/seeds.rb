@@ -87,11 +87,11 @@ mohammed = Patient.create({
     allergies: "almond",
     diet: "normal",
     nextOfKin: "Stephen Stotch",
-    nextOfKinPhoneNumber: "555-COF-FEE"
+    nextOfKinPhoneNumber: "555-COF-FEE",
     isolation: "none",
     pmh: [4, 7, 10],
-    homeMeds: [65,93]
-    surgicalHx: "none"
+    homeMeds: [65,93],
+    surgicalHx: "none",
     familyHistory: "none",
     smoking: false,
     alcohol: false,
