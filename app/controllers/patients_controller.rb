@@ -3,7 +3,7 @@ class PatientsController < ApplicationController
       @patients = Patient.all
       respond_to do |format|
         format.html
-        format.json{ render json: @products}
+        format.json{ render json: @patients}
       end
   end
 
