@@ -24,7 +24,7 @@ class PatientsController < ApplicationController
   def update
     @patient = Patient.find(params[:id])
     if @patient.update(patient_params)
-      render json: @patient.to_json, status: :created
+      render json: @patient.to_json, status: :ok
     else
       render json: @patient.errors, status: :unprocessable_entity
     end
