@@ -13,8 +13,6 @@
     var vm = this;
     vm.patients = PatientFactory.query();
     vm.active = 0;
+    vm.hide = false;
   };
-    $('#activeButton').on('click', function(){
-      console.log(vm.active);
-});
 }());

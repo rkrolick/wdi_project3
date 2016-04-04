@@ -1,13 +1,17 @@
 .middle_container{
   border-radius: 5px;
   color: #282c37;
-  background-color: #dddfe6;
+  font-family: 'Abel', sans-serif;
+  font-size: 1.5em;
   border: 2px solid black;
-  box-shadow: 10px 10px 5px #444f59;
 }
+
 #activeButton {
   background-color: #dddfe6;
   color: black;
+  overflow: hidden;
+  width: 200px;
+  margin: 9px
 }
 div[class="jumbotron"] {
   background-size: auto;
@@ -15,4 +19,8 @@ div[class="jumbotron"] {
   font-weight: bold;
   font-style: italic;
   font-family: Black Ops One, cursive;
+}
+.activeButton{
+  margin: 5px;
+  display: block;
 }
