@@ -1,22 +1,21 @@
 <div class="container">
 <div class="row">
   <div class="col-md-3" >
-    <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-repeat="patient in vm.patients" ng-click="vm.active=$index">
-      {{patient.firstName}}
+    <button type="button" class="btn btn-primary activeButton btn-lg" id="activeButton" ng-repeat="patient in vm.patients" ng-click="vm.active=$index">
+      {{patient.lastName}}
     </button>
   </div>
-  <div class="col-md-6 middle_container">
+  <div class="col-md-9 middle_container">
     <div class="row">
-      <div class="col-md-1">
-        <p>Name:</p>
-        <p>Code Status:</p>
+      <div class="col-md-2">
+        <p>First Name:</p>
+        <p>Last Name:</p>
         <p>D.O.B:</p>
         <p>Age:</p>
         <p>Attendant:</p>
       </div>
-      <div class="col-md-2 col-md-offset-1">
-        <p>{{vm.patients[vm.active].firstName}} {{vm.patients[vm.active].lastName}}</p>
-        <p>{{vm.patients[vm.active].codeStatus}}</p>
+      <div class="col-md-2 ">
+        <p>{{vm.patients[vm.active].firstName}}</p> <p>{{vm.patients[vm.active].lastName}}</p>
         <p>{{vm.patients[vm.active].dob}}</p>
         <p>{{vm.patients[vm.active].age}}</p>
         <p>{{vm.patients[vm.active].attendingName}}</p>
@@ -35,19 +34,19 @@
         <p>{{vm.patients[vm.active].occupation}}</p>
         <p>{{vm.patients[vm.active].familyHistory}}</p>
       </div>
-      <div class="col-md-1">
-        <p>Room#:</p>
-        <p>MRN:</p>
-        <p>Allergies:</p>
-        <p>Occupation:</p>
-        <p>Family History:</p>
+      <div class="col-md-2">
+        <p>PMH:</p>
+        <p>HomeMeds:</p>
+        <p>SurgicalHx:</p>
+        <p>Smoking:</p>
+        <p>Alcohol:</p>
       </div>
-      <div class="col-md-2 col-md-offset-1">
-        <p>{{vm.patients[vm.active].roomNumber}}</p>
-        <p>{{vm.patients[vm.active].mrn}}</p>
-        <p>{{vm.patients[vm.active].allergies}}</p>
-        <p>{{vm.patients[vm.active].occupation}}</p>
-        <p>{{vm.patients[vm.active].familyHistory}}</p>
+      <div class="col-md-2">
+        <p>{{vm.patients[vm.active].pmh}}</p>
+        <p>{{vm.patients[vm.active].homeMeds}}</p>
+        <p>{{vm.patients[vm.active].surgicalHx}}</p>
+        <p>{{vm.patients[vm.active].smoking}}</p>
+        <p>{{vm.patients[vm.active].alcohol}}</p>
       </div>
     </div>
   </div>

@@ -1,9 +1,18 @@
-button {
-  width: 200px;
-  overflow: hidden;
-  background-color: #2b90d9;
-}
 .middle_container{
-  background-color: #d9e1e8;
+  border-radius: 5px;
   color: #282c37;
+  background-color: #dddfe6;
+  border: 2px solid black;
+  box-shadow: 10px 10px 5px #444f59;
+}
+#activeButton {
+  background-color: #dddfe6;
+  color: black;
+}
+div[class="jumbotron"] {
+  background-size: auto;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  font-family: Black Ops One, cursive;
 }
