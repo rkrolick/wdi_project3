@@ -132,7 +132,8 @@ mohammed.visits.create({
    decubitisUlcers: "",
    edema: "none",
    pt: "",
-   skinNotes: ""
+   skinNotes: "",
+   assessmentPlan: "Patient on broad spectrum antibiotics until sputum gram stain and culture return. Continue maintenance fluid. Monitor labs"
   })
 
   sheila.visits.create({
@@ -151,7 +152,7 @@ mohammed.visits.create({
      npo: true,
      diet: "NPO",
      tubes: "",
-     giNotes: "GI seen today, continue NPO and monitor",
+     giNotes: "GI saw today, Lipase and amylase elevated. Abdominal ultrasound showed no stones, Pt with history of alcohol abuse. Bolus Normal saline with D5 maintenance fluids and insulin sliding scale. Keep NPO and watch",
      foley: "",
      foleyPlaceDate: "",
      renalNotes: "",
@@ -168,8 +169,45 @@ mohammed.visits.create({
      edema: "",
      pt: "",
      skinNotes: "",
+     assessmentPlan: "causeeee kyles moms a bitch shes a big fat bitch shes the biggest bitch in the whole wide world shes a stupid bitch if tehre ever was a bitch shes a bitch to all the boys an girls"
 
     })
+
+mohammed.visits.create({
+  imaging: "",
+  otherProcedures: "Lumbar Puncture today, waiting on CSF analysis",
+  chiefComplaint: "Hard nodule on shaft of penis",
+   loc: "",
+   gcs: "",
+   neuroNotes: "Patient is AAOx3, no changes in mental status. No weakness or neurological defect other than his inborn one",
+   rhythm: "NSR",
+   ejectionFraction: "",
+   cardioNotes: "",
+   ventSettings: "",
+   abg: "",
+   pulmonaryNotes: "",
+   npo: false,
+   diet: "normal diet",
+   tubes: "NG tube",
+   giNotes: "",
+   foley: "",
+   foleyPlaceDate: "",
+   renalNotes: "",
+   glucoseSticks: "",
+   endoNotes: "",
+   sirsSepsisAlert: "",
+   antibiotics: "Not indicated",
+   cultures: "",
+   idNotes: "ID consulted, Gumma seen. Ran RPR and VDRL. ",
+   intact: "",
+   woundCare: "",
+   incision: "",
+   decubitisUlcers: "",
+   edema: "",
+   pt: "",
+   skinNotes: "",
+   assessmentPlan: "Patient presents with primary syphyllis. RPR and VDRL positive. Started on Penecillin G."
+  })
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
