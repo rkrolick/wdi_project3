@@ -19,9 +19,7 @@
 "use strict";
 
 (function(){
-  angular
-  .module("handOff",["ngResource","ui.router","patients.module"])
-  .config(["$stateProvider",RouterFunction]);
+  angular.module("handOff",["ngResource","ui.router","patients.module"]).config(["$stateProvider",RouterFunction]);
 
   function RouterFunction($stateProvider){
     $stateProvider
