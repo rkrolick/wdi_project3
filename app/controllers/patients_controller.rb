@@ -1,7 +1,10 @@
 class PatientsController < ApplicationController
   def index
       @patients = Patient.all
-      render json: @patients.to_json, status: :ok
+      respond_to do |format|
+        format.html
+        format.json{ render json: @products}
+      end
   end
 
   def show
