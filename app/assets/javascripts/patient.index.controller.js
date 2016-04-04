@@ -11,5 +11,5 @@
 
   function PatientControllerFunction(PatientFactory){
     this.patients = PatientFactory.query();
-  }
+}
 }());
