@@ -1,22 +1,20 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3" >
-      <div class="" ng-repeat="patient in vm.patients">
-        <button type="button" class="btn btn-primary activeButton btn-lg" ng-hide="vm.hide == 'hide'+$index" ng-click="vm.active=$index">
+
+        <button type="button" ng-repeat="patient in vm.patients" class="btn btn-primary activeButton btn-lg" ng-click="vm.active=$index">
           {{patient.lastName}}
         </button>
-      </div>
+
 
     </div>
     <div class="col-md-6 middle_container">
       <table class="table table-striped">
         <tr>
-          <td>First Name:</td>
-          <td>{{vm.patients[vm.active].firstName}}</td>
-          <td>Last Name:</td>
-          <td>{{vm.patients[vm.active].lastName}}
-
-          </td>
+          <th>First Name:</th>
+          <th>{{vm.patients[vm.active].firstName}}</th>
+          <th>Last Name:</th>
+          <th>{{vm.patients[vm.active].lastName}}</th>
         </tr>
         <tr>
           <td>D.O.B.:</td>

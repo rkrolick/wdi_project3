@@ -17,14 +17,16 @@
 div[class="jumbotron"] {
   background-size: auto;
   text-align: center;
-  font-weight: bold;
-  font-style: italic;
-  font-family: Black Ops One, cursive;
+  background-color: black;
+  color: white;
+  font-family: Monoton, cursive;
+}
+td,tr,th{
+  width: 200px;
+  max-height: 10px;
+  overflow: hidden;
 }
 .activeButton{
   margin: 5px;
-  display: block;
-}
-.soHidden {
-  visibility: hidden !important;
+  width: auto;
 }
