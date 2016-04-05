@@ -9,7 +9,7 @@ img {
   width: auto;
 }
 main {
-  font-family: 'Abel', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .middle_container{
   background-color: white;
@@ -52,4 +52,11 @@ td,tr,th{
 img[class="pill"] {
   height: 25px;
   width: auto;
+}
+
+.keys {
+  font-weight: bolder;
+}
+.values {
+  font-style: italic;
 }
