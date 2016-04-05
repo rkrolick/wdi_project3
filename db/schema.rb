@@ -11,17 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160405174939) do
+ActiveRecord::Schema.define(version: 20160405183624) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bmps", force: :cascade do |t|
+    t.integer "na"
+    t.integer "k"
+    t.integer "cl"
+    t.integer "bicarb"
+    t.integer "bun"
+    t.integer "cr"
+    t.integer "glucose"
+    t.integer "visit_id"
+  end
+
+  add_index "bmps", ["visit_id"], name: "index_bmps_on_visit_id", using: :btree
 
   create_table "cbcs", force: :cascade do |t|
     t.integer "wbc"
     t.integer "hgb"
     t.integer "hct"
     t.integer "plt"
+    t.integer "visit_id"
   end
+
+  add_index "cbcs", ["visit_id"], name: "index_cbcs_on_visit_id", using: :btree
 
   create_table "patients", force: :cascade do |t|
     t.string   "firstName"
@@ -49,6 +65,15 @@ ActiveRecord::Schema.define(version: 20160405174939) do
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
+
+  create_table "ptptts", force: :cascade do |t|
+    t.integer "pt"
+    t.integer "aptt"
+    t.integer "inr"
+    t.integer "visit_id"
+  end
+
+  add_index "ptptts", ["visit_id"], name: "index_ptptts_on_visit_id", using: :btree
 
   create_table "visits", force: :cascade do |t|
     t.string   "imaging"
@@ -103,6 +128,9 @@ ActiveRecord::Schema.define(version: 20160405174939) do
 
   add_index "vitals", ["visit_id"], name: "index_vitals_on_visit_id", using: :btree
 
+  add_foreign_key "bmps", "visits"
+  add_foreign_key "cbcs", "visits"
+  add_foreign_key "ptptts", "visits"
   add_foreign_key "visits", "patients"
   add_foreign_key "vitals", "visits"
 end

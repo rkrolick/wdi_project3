@@ -240,7 +240,7 @@ mohammed.visits.create({
   mohamvisit1.ptptts.create({
     pt: 10,
     aptt: 35,
-    INR: 1
+    inr: 1
     })
 
 

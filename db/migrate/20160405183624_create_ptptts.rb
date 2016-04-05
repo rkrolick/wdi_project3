@@ -4,6 +4,7 @@ class CreatePtptts < ActiveRecord::Migration
       t.integer :pt
       t.integer :aptt
       t.integer :inr
+      t.references :visit, index: true, foreign_key: true
     end
   end
 end
