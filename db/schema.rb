@@ -90,7 +90,7 @@ ActiveRecord::Schema.define(version: 20160405170918) do
     t.integer "heartRate"
     t.integer "systolic"
     t.integer "diastolic"
-    t.integer "respitoryRate"
+    t.integer "respiratoryRate"
     t.integer "patient_id"
     t.integer "visit_id"
   end
