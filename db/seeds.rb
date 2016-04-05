@@ -209,7 +209,8 @@ mohammed.visits.create({
    assessmentPlan: "Patient presents with primary syphyllis. RPR and VDRL positive. Started on Penecillin G."
   })
 
-  mohamvisit1 = mohammed.visits.find(1)
+  visitId = mohammed.visits.first.id
+  mohamvisit1 = mohammed.visits.find(visitId)
   mohamvisit1.vitals.create({
     o2Sat: 100,
     temp: 99.5,
@@ -219,7 +220,33 @@ mohammed.visits.create({
     respiratoryRate: 24
   })
 
-  sheilavisit1 = sheila.visits.find(0)
+  mohamvisit1.cbcs.create({
+    wbc: 4000,
+    hgb: 12,
+    hct: 45,
+    plt: 180000
+    })
+
+  mohamvisit1.bmps.create({
+    na: 140,
+    k: 4,
+    cl: 100,
+    bicarb: 24,
+    bun: 20,
+    cr: 0.9,
+    glucose: 146
+    })
+
+  mohamvisit1.ptptts.create({
+    pt: 10,
+    aptt: 35,
+    inr: 1
+    })
+
+
+
+  visitId = sheila.visits.first.id
+  sheilavisit1 = sheila.visits.find(visitId)
   sheilavisit1.vitals.create({
     o2Sat: 100,
     temp: 100,
@@ -228,6 +255,64 @@ mohammed.visits.create({
     diastolic: 76,
     respiratoryRate: 33
     })
+
+  sheilavisit1.cbcs.create({
+    wbc: 6000,
+    hgb: 9,
+    hct: 35,
+    plt: 385000
+    })
+
+  sheilavisit1.bmps.create({
+    na: 140,
+    k: 4,
+    cl: 100,
+    bicarb: 24,
+    bun: 20,
+    cr: 0.9,
+    glucose: 135
+    })
+
+  sheilavisit1.ptptts.create({
+    pt: 13,
+    aptt: 38,
+    inr: 1.2
+    })
+
+  sheilavisit1.vitals.create({
+    o2Sat: 97,
+    temp: 101,
+    heartRate: 145,
+    systolic: 108,
+    diastolic: 86,
+    respiratoryRate: 31
+    })
+
+  sheilavisit1.cbcs.create({
+    wbc: 8000,
+    hgb: 8.7,
+    hct: 34,
+    plt: 320000
+    })
+
+  sheilavisit1.bmps.create({
+    na: 134,
+    k: 4,
+    cl: 100,
+    bicarb: 19,
+    bun: 27,
+    cr: 0.8,
+    glucose: 136
+    })
+
+  sheilavisit1.ptptts.create({
+    pt: 14,
+    aptt: 37,
+    inr: 1.1
+    })
+
+
+
 
 
 # This file should contain all the record creation needed to seed the database with its default values.
