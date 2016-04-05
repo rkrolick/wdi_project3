@@ -1,14 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3" >
-
-        <button type="button" ng-repeat="patient in vm.patients" class="btn btn-primary activeButton btn-lg" ng-click="vm.active=$index">
+      <div class="row" ng-repeat="patient in vm.patients">
+        <button type="button" class="btn btn-primary activeButton btn-lg col-md-10" ng-click="vm.active=$index">
           {{patient.lastName}}
         </button>
-
+      </div>
 
     </div>
-    <div class="col-md-6 middle_container">
+    <div type="button" class="col-md-6 middle_container nav">
       <table class="table table-striped">
         <tr>
           <th>First Name:</th>
