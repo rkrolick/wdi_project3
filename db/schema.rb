@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160404175625) do
+ActiveRecord::Schema.define(version: 20160405170918) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,6 +83,15 @@ ActiveRecord::Schema.define(version: 20160404175625) do
   end
 
   add_index "visits", ["patient_id"], name: "index_visits_on_patient_id", using: :btree
+
+  create_table "vitals", force: :cascade do |t|
+    t.integer "o2Sat"
+    t.float   "temp"
+    t.integer "heartRate"
+    t.integer "systolic"
+    t.integer "diastolic"
+    t.integer "respitoryRate"
+  end
 
   add_foreign_key "visits", "patients"
 end
