@@ -23,5 +23,11 @@
       controller: "PatientIndexController",
       controllerAs: "vm"
     })
+    .state("Expanded", {
+      url: "/expanded",
+      templateUrl: "ng-views/expanded.html",
+      controller: "VisitIndexController",
+      controllerAs: "vm"
+    })
   }
 })();
