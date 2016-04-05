@@ -1,4 +1,4 @@
-class PtpttsController < ApplicationController
+class PtpttController < ApplicationController
   def index
     get_visit
     @ptptts = @visit.ptptts.all

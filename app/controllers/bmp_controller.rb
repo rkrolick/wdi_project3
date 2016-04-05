@@ -1,4 +1,4 @@
-class bmpsController < ApplicationController
+class BmpController < ApplicationController
   def index
     get_visit
     @bmps = @visit.bmps.all
