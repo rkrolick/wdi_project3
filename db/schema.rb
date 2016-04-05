@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160405170918) do
+ActiveRecord::Schema.define(version: 20160405174939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cbcs", force: :cascade do |t|
+    t.integer "wbc"
+    t.integer "hgb"
+    t.integer "hct"
+    t.integer "plt"
+  end
 
   create_table "patients", force: :cascade do |t|
     t.string   "firstName"
@@ -91,7 +98,14 @@ ActiveRecord::Schema.define(version: 20160405170918) do
     t.integer "systolic"
     t.integer "diastolic"
     t.integer "respitoryRate"
+    t.integer "patient_id"
+    t.integer "visit_id"
   end
 
+  add_index "vitals", ["patient_id"], name: "index_vitals_on_patient_id", using: :btree
+  add_index "vitals", ["visit_id"], name: "index_vitals_on_visit_id", using: :btree
+
   add_foreign_key "visits", "patients"
+  add_foreign_key "vitals", "patients"
+  add_foreign_key "vitals", "visits"
 end
