@@ -1,5 +1,27 @@
 == README
 
+What is it?
+-----------
+
+Welcome to HandOff! A simple and beautiful patient management solution for interns and residents. As a medical student, I noticed one thing. The hoops through which residents had to jump to simply sign out their patients to the next team were cumbersome and insecure. The aim of the Hand-Off (c)(tm) team is to provide a secure, organized and homogenized patient organization system.
+
+Language Versions
+-----------------
+Hand-off is built on a Ruby on Rails backbone: Ruby Version 2.2.3p173 (2015-08-18 revision 51636) [x86_64-darwin14]
+
+with an Angular.js front end: version 1.5.2
+
+System Dependencies:
+--------------------
+ JS? Angular? really nothing its afucking weba pp wtf does this mean.
+
+
+
+
+
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
