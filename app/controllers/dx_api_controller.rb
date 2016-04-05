@@ -1,4 +1,4 @@
-class ApiTestController < ApplicationController
+class DxApiController < ApplicationController
   def index
     response = HTTParty.get("http://icd10api.com/?code=#{params[:query]}&apikey=d74d8c79")
     @diagnosis = JSON.parse(response.body)
