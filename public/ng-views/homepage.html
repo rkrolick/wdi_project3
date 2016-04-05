@@ -1,9 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3" >
-      <button type="button" class="btn btn-primary activeButton btn-lg" ng-repeat="patient in vm.patients" ng-click="vm.active=$index" ng-hide="vm.hide == 'hide'+ $index">
-        {{patient.lastName}}
-      </button>
+      <div class="" ng-repeat="patient in vm.patients">
+        <button type="button" class="btn btn-primary activeButton btn-lg" ng-hide="vm.hide == 'hide'+$index" ng-click="vm.active=$index">
+          {{patient.lastName}}
+        </button>
+      </div>
+
     </div>
     <div class="col-md-6 middle_container">
       <table class="table table-striped">
@@ -33,6 +36,30 @@
               <td>Allergies:</td>
               <td>{{vm.patients[vm.active].allergies}}
               </tr>
+              <tr>
+                <td>Allergies:</td>
+                <td>{{vm.patients[vm.active].allergies}}</td>
+                <td>Occupation:</td>
+                <td>{{vm.patients[vm.active].occupation}}
+                </tr>
+                <tr>
+                  <td>Family History:</td>
+                  <td>{{vm.patients[vm.active].familyHistory}}</td>
+                  <td>PMH:</td>
+                  <td>{{vm.patients[vm.active].pmh}}
+                  </tr>
+                  <tr>
+                    <td>Home Meds:</td>
+                    <td>{{vm.patients[vm.active].homeMeds}}</td>
+                    <td>Surgical HX:</td>
+                    <td>{{vm.patients[vm.active].surgicalHx}}
+                    </tr>
+                    <tr>
+                      <td>Smoking:</td>
+                      <td>{{vm.patients[vm.active].smoking}}</td>
+                      <td>Alcohol:</td>
+                      <td>{{vm.patients[vm.active].alcohol}}
+                      </tr>
             </table>
           </div>
           <!-- <div class="row">
@@ -86,12 +113,10 @@
   <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
     Edit Patient
   </button>
-  <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="vm.hide = 'hide' + vm.active ; vm.active = vm.active + 1">
-    Discharge Patient
+  <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
+    Expand Patient
   </button>
-  <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="vm.hide = false" >
-    Show All Patient
-  </button>
+
 </div>
 </div>
 

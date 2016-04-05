@@ -4,6 +4,7 @@
   font-family: 'Abel', sans-serif;
   font-size: 1.5em;
   border: 2px solid black;
+  padding-top: 10px;
 }
 
 #activeButton {
@@ -23,4 +24,7 @@ div[class="jumbotron"] {
 .activeButton{
   margin: 5px;
   display: block;
+}
+.soHidden {
+  visibility: hidden !important;
 }
