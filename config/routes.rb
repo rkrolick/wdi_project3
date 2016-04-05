@@ -8,4 +8,5 @@ Rails.application.routes.draw do
     end
   end
   root to: redirect('/patients#/')
+  get '/api_test/:query', to: 'api_test#index', as: 'diagnosis'
 end

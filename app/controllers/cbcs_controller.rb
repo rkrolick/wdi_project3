@@ -47,10 +47,4 @@ class CbcsController < ApplicationController
       :plt
     )
   end
-
-  def get_visit
-    @patient = Patient.find(params[:patient_id])
-    @visit = @patient.visits.find(params[:visit_id])
-  end
-
 end
