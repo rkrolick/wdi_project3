@@ -279,7 +279,41 @@ mohammed.visits.create({
     inr: 1.2
     })
 
-  
+  sheilavisit1.vitals.create({
+    o2Sat: 97,
+    temp: 101,
+    heartRate: 145,
+    systolic: 108,
+    diastolic: 86,
+    respiratoryRate: 31
+    })
+
+  sheilavisit1.cbcs.create({
+    wbc: 8000,
+    hgb: 8.7,
+    hct: 34,
+    plt: 320000
+    })
+
+  sheilavisit1.bmps.create({
+    na: 134,
+    k: 4,
+    cl: 100,
+    bicarb: 19,
+    bun: 27,
+    cr: 0.8,
+    glucose: 136
+    })
+
+  sheilavisit1.ptptts.create({
+    pt: 14,
+    aptt: 37,
+    inr: 1.1
+    })
+
+
+
+
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
