@@ -1,4 +1,4 @@
-class CreateCbc < ActiveRecord::Migration
+class CreateCbcs < ActiveRecord::Migration
   def change
     create_table :cbcs do |t|
       t.integer :wbc
