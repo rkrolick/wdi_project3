@@ -209,7 +209,8 @@ mohammed.visits.create({
    assessmentPlan: "Patient presents with primary syphyllis. RPR and VDRL positive. Started on Penecillin G."
   })
 
-  mohamvisit1 = mohammed.visits.find(1)
+  visitId = mohammed.visits.first.id
+  mohamvisit1 = mohammed.visits.find(visitId)
   mohamvisit1.vitals.create({
     o2Sat: 100,
     temp: 99.5,
@@ -219,7 +220,8 @@ mohammed.visits.create({
     respiratoryRate: 24
   })
 
-  sheilavisit1 = sheila.visits.find(0)
+  visitId = sheila.visits.first.id
+  sheilavisit1 = sheila.visits.find(visitId)
   sheilavisit1.vitals.create({
     o2Sat: 100,
     temp: 100,
