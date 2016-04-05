@@ -208,6 +208,28 @@ mohammed.visits.create({
    skinNotes: "",
    assessmentPlan: "Patient presents with primary syphyllis. RPR and VDRL positive. Started on Penecillin G."
   })
+
+  mohamvisit1 = mohammed.visits.find(1)
+  mohamvisit1.vitals.create({
+    o2Sat: 100,
+    temp: 99.5,
+    heartRate: 100,
+    systolic: 140,
+    diastolic: 90,
+    respiratoryRate: 24
+  })
+
+  sheilavisit1 = sheila.visits.find(0)
+  sheilavisit1.vitals.create({
+    o2Sat: 100,
+    temp: 100,
+    heartRate: 130,
+    systolic: 110,
+    diastolic: 76,
+    respiratoryRate: 33
+    })
+
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #

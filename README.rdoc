@@ -9,11 +9,32 @@ Language Versions
 -----------------
 Hand-off is built on a Ruby on Rails backbone: Ruby Version 2.2.3p173 (2015-08-18 revision 51636) [x86_64-darwin14]
 
-with an Angular.js front end: version 1.5.2
+Angular.js front end: version 1.5.2
 
 System Dependencies:
 --------------------
  JS? Angular? really nothing its afucking weba pp wtf does this mean.
+ Must have Ruby on Rails installed.
+
+Configuration and Installation Instructions:
+---------------------------
+1. Download the app to a directory.
+
+2. Run Bundle Install.
+
+3. Start a rails server using command "rails server"
+
+4. Navigate to http://localhost:3000
+
+5. Open the index file.
+
+
+Copyright and Licensing information
+-----------------------------------
+
+ICD 
+
+
 
 
 
