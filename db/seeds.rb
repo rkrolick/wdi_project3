@@ -220,6 +220,31 @@ mohammed.visits.create({
     respiratoryRate: 24
   })
 
+  mohamvisit1.cbcs.create({
+    wbc: 4000,
+    hgb: 12,
+    hct: 45,
+    plt: 180000
+    })
+
+  mohamvisit1.bmps.create({
+    na: 140,
+    k: 4,
+    cl: 100,
+    bicarb: 24,
+    bun: 20,
+    cr: 0.9,
+    glucose: 146
+    })
+
+  mohamvisit1.ptptts.create({
+    pt: 10,
+    aptt: 35,
+    INR: 1
+    })
+
+  
+
   visitId = sheila.visits.first.id
   sheilavisit1 = sheila.visits.find(visitId)
   sheilavisit1.vitals.create({
