@@ -98,14 +98,11 @@ ActiveRecord::Schema.define(version: 20160405174939) do
     t.integer "systolic"
     t.integer "diastolic"
     t.integer "respiratoryRate"
-    t.integer "patient_id"
     t.integer "visit_id"
   end
 
-  add_index "vitals", ["patient_id"], name: "index_vitals_on_patient_id", using: :btree
   add_index "vitals", ["visit_id"], name: "index_vitals_on_visit_id", using: :btree
 
   add_foreign_key "visits", "patients"
-  add_foreign_key "vitals", "patients"
   add_foreign_key "vitals", "visits"
 end

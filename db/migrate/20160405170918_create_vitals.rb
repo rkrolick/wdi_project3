@@ -7,7 +7,6 @@ class CreateVitals < ActiveRecord::Migration
       t.integer :systolic
       t.integer :diastolic
       t.integer :respiratoryRate
-      t.references :patient, index: true, foreign_key: true
       t.references :visit, index: true, foreign_key: true
     end
   end
