@@ -1,12 +1,18 @@
-<h1>Visits</h1>
-<div class="row">
-  <div type="button" class="col-md-6 col-md-offset-3 middle_container nav">
-    <div class="" ng-repeat="(key,value) in vm.visits[0]" ng-if="value">
-      <table class="table table-striped">
-        <tr>
-          <td>{{key}}:</td>
-          <td>{{value}}</td>
-        </tr>
+
+<div class="container">
+  <div class="" ng-repeat="visit in vm.visits">
+    <div class="row">
+      <div type="button" class="col-md-8 col-md-offset-2 middle_container nav">
+        <h1>Visit {{vm.visits.length - $index}}</h1>
+
+          <table class="table table-striped" ng-repeat="(key,value) in visit" ng-if="value | key == ''">
+            <tr class="rows">
+              <td class="keys">{{key}}:</td>
+              <td class="values">{{value}}</td>
+            </tr>
+          </table>
+
       </div>
     </div>
+  </div>
 </div>

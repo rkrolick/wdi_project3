@@ -9,7 +9,7 @@
   ]);
 
   function PatientFactoryFunction($resource){
-    return $resource("http://localhost:3000/patients/:id.json", {}, {
+    return $resource("http://localhost:3000/patients.json", {}, {
       update: {method: "PUT"}
     });
   }

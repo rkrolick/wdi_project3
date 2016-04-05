@@ -5,12 +5,12 @@
   .module("handOff")
   .controller("VisitIndexController", [
     "VisitFactory",
-    "$resource",
+    "$stateParams",
     VisitControllerFunction
   ]);
 
-  function VisitControllerFunction(VisitFactory){
+  function VisitControllerFunction(VisitFactory, $stateParams){
     var vm = this;
-    vm.visits = VisitFactory.query();
+    vm.visits = VisitFactory.query({patient_id: $stateParams.patient_id});
   };
 }());

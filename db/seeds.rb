@@ -312,6 +312,100 @@ mohammed.visits.create({
     })
 
 
+  mrgarrison = Patient.create({
+    firstName: "Herbert/Janet",
+    lastName: "Garrison",
+    mrn: 8336,
+    attendingName: "Dr. Bajwa",
+    roomNumber: "921",
+    codeStatus: "DNR",
+    dob: "04-1-1975",
+    age: 41,
+    allergies: "none",
+    diet: "Normal",
+    nextOfKin: "Mr. Slave",
+    nextOfKinPhoneNumber: "696-696-6969",
+    isolation: "Contact",
+    pmh: [3,2,3],
+    homeMeds: [8, 76,49, 51],
+    surgicalHx: "gender reassignment surgery",
+    familyHistory: "none",
+    smoking: false,
+    alcohol: true,
+    drugs: true,
+    psychHx: "extensive",
+    occupation: "4th grade teacher"
+    })
+    mrgarrison.visits.create({
+      imaging: "Abdominal x-ray shows bowling pin and hamster corpse lodged in sigmoid colon.",
+      otherProcedures: "Surgical intervention necessary",
+      chiefComplaint: "Foreign Body in anus and rectum, initial encounter",
+       loc: "AAOx3",
+       gcs: "",
+       neuroNotes: "",
+       rhythm: "",
+       ejectionFraction: "",
+       cardioNotes: "",
+       ventSettings: "",
+       abg: "",
+       pulmonaryNotes: "",
+       npo: true,
+       diet: "NPO",
+       tubes: "anal decompression tube in place, ngt placed as well.",
+       giNotes: "GI saw today, patient has severeal foreign bodies in rectum and sigmoid colon. needs surgical intervention. Get surgery consult.",
+       foley: "in place",
+       foleyPlaceDate: "4-3-2015",
+       renalNotes: "",
+       glucoseSticks: "",
+       endoNotes: "",
+       sirsSepsisAlert: "",
+       antibiotics: "Will monitor leukocytosis",
+       cultures: "blood cultures X 3 sent. ",
+       idNotes: "",
+       intact: "",
+       woundCare: "",
+       incision: "",
+       decubitisUlcers: "",
+       edema: "",
+       pt: "",
+       skinNotes: "",
+       assessmentPlan: "Patient for surgery tomorrow"
+
+      })
+    visitId = mrgarrison.visits.first.id
+    mrgarrisonvisit1 = mrgarrison.visits.find(visitId)
+    mrgarrisonvisit1.vitals.create({
+      o2Sat: 100,
+      temp: 97.6,
+      heartRate: 76,
+      systolic: 118,
+      diastolic: 87,
+      respiratoryRate: 20
+      })
+
+    mrgarrisonvisit1.cbcs.create({
+      wbc: 4000,
+      hgb: 13,
+      hct: 30,
+      plt: 150000
+      })
+
+    mrgarrisonvisit1.bmps.create({
+      na: 140,
+      k: 4,
+      cl: 100,
+      bicarb: 23,
+      bun: 22,
+      cr: 1.2,
+      glucose: 160
+      })
+
+    mrgarrisonvisit1.ptptts.create({
+      pt: 12,
+      aptt: 40,
+      inr: 1.0
+      })
+
 
 
 

@@ -24,7 +24,7 @@
       controllerAs: "vm"
     })
     .state("Expanded", {
-      url: "/expanded",
+      url: "/:patient_id/expanded",
       templateUrl: "ng-views/expanded.html",
       controller: "VisitIndexController",
       controllerAs: "vm"

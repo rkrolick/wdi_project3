@@ -1,75 +1,79 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-3" >
+    <div class="col-md-3 btn-group-vertical" role="group">
       <div class="row" ng-repeat="patient in vm.patients">
-        <button type="button" id="patientButton" class="btn btn-primary activeButton btn-lg col-md-10" ng-click="vm.active=$index">
+
+        <button type="button" id="patientButton" class="btn btn-primary activeButton btn-lg col-md-10" ng-click="vm.active=$index ; vm.setActivePatient(patient)">
           <img src="https://pixabay.com/static/uploads/photo/2015/07/23/13/09/medicine-856933_960_720.png" class="pill" alt="" />      {{patient.lastName}}
         </button>
-      </div>
 
+      </div>
     </div>
+
     <div class="col-md-6 middle_container nav">
       <table class="table table-striped">
         <tr>
-          <th>First Name:</th>
-          <th>{{vm.patients[vm.active].firstName}}</th>
-          <th>Last Name:</th>
-          <th>{{vm.patients[vm.active].lastName}}</th>
+          <th class="keys">First Name:</th>
+          <th class="values">{{vm.patients[vm.active].firstName}}</th>
+          <th class="keys">Last Name:</th>
+          <th class="values">{{vm.patients[vm.active].lastName}}</th>
         </tr>
         <tr>
-          <td>D.O.B.:</td>
-          <td>{{vm.patients[vm.active].dob}}</td>
-          <td>Age:</td>
-          <td>{{vm.patients[vm.active].age}}
-          </tr>
+          <td class="keys">D.O.B.:</td>
+          <td class="values">{{vm.patients[vm.active].dob}}</td>
+          <td class="keys">Age:</td>
+          <td class="values">{{vm.patients[vm.active].age}}
+        </tr>
           <tr>
-            <td>Attendant:</td>
-            <td>{{vm.patients[vm.active].attendingName}}</td>
-            <td>Room#:</td>
-            <td>{{vm.patients[vm.active].roomNumber}}
-            </tr>
+            <td class="keys">Attendant:</td>
+            <td class="values">{{vm.patients[vm.active].attendingName}}</td>
+            <td class="keys">Room#:</td>
+            <td class="values">{{vm.patients[vm.active].roomNumber}}
+          </tr>
             <tr>
-              <td>MRN:</td>
-              <td>{{vm.patients[vm.active].mrn}}</td>
-              <td>Allergies:</td>
-              <td>{{vm.patients[vm.active].allergies}}
-              </tr>
+              <td class="keys">MRN:</td>
+              <td class="values">{{vm.patients[vm.active].mrn}}</td>
+              <td class="keys">Allergies:</td>
+              <td class="values">{{vm.patients[vm.active].allergies}}
+            </tr>
               <tr>
-                <td>Allergies:</td>
-                <td>{{vm.patients[vm.active].allergies}}</td>
-                <td>Occupation:</td>
-                <td>{{vm.patients[vm.active].occupation}}
-                </tr>
+                <td class="keys">Allergies:</td>
+                <td class="values">{{vm.patients[vm.active].allergies}}</td>
+                <td class="keys">Occupation:</td>
+                <td class="values">{{vm.patients[vm.active].occupation}}
+              </tr>
                 <tr>
-                  <td>Family History:</td>
-                  <td>{{vm.patients[vm.active].familyHistory}}</td>
-                  <td>PMH:</td>
-                  <td>{{vm.patients[vm.active].pmh}}
-                  </tr>
+                  <td class="keys">Family History:</td>
+                  <td class="values">{{vm.patients[vm.active].familyHistory}}</td>
+                  <td class="keys">PMH:</td>
+                  <td class="values">{{vm.patients[vm.active].pmh}}
+                </tr>
                   <tr>
-                    <td>Home Meds:</td>
-                    <td>{{vm.patients[vm.active].homeMeds}}</td>
-                    <td>Surgical HX:</td>
-                    <td>{{vm.patients[vm.active].surgicalHx}}
-                    </tr>
+                    <td class="keys">Home Meds:</td>
+                    <td class="values">{{vm.patients[vm.active].homeMeds}}</td>
+                    <td class="keys">Surgical HX:</td>
+                    <td class="values">{{vm.patients[vm.active].surgicalHx}}
+                  </tr>
                     <tr>
-                      <td>Smoking:</td>
-                      <td>{{vm.patients[vm.active].smoking}}</td>
-                      <td>Alcohol:</td>
-                      <td>{{vm.patients[vm.active].alcohol}}
-                      </tr>
+                      <td class="keys">Smoking:</td>
+                      <td class="values">{{vm.patients[vm.active].smoking}}</td>
+                      <td class="keys">Alcohol:</td>
+                      <td class="values">{{vm.patients[vm.active].alcohol}}
+                    </tr>
                     </table>
                   </div>
                   <div class="col-md-3" >
+                    <div class="btn-group-vertical" role="group">
                     <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
                       Add Patient
                     </button>
                     <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
                       Edit Patient
                     </button>
-                    <button type="button" ui-sref="Expanded" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
+                    <button type="button" ui-sref="Expanded({patient_id: vm.activePatient.id})" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
                       Expand Patient
                     </button>
+                  </div>
 
                   </div>
                 </div>
