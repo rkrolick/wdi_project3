@@ -4,16 +4,27 @@ font-style: normal;
 font-weight: normal;
 src: local('Mathilde'), url('mathilde.woff') format('woff');
 }
-
+img {
+  height: 200px;
+  width: auto;
+}
+main {
+  font-family: 'Abel', sans-serif;
+}
 .middle_container{
+  background-color: white;
   border-radius: 5px;
   color: #282c37;
-  font-family: 'Abel', sans-serif;
   font-size: 1.5em;
   border: 2px solid black;
   padding-top: 10px;
 }
 
+h1 {
+  background-size: auto;
+  text-align: center;
+  font-family: 'Abel', cursive;
+}
 #activeButton {
   background-color: #dddfe6;
   color: black;
@@ -24,8 +35,7 @@ src: local('Mathilde'), url('mathilde.woff') format('woff');
 div[class="jumbotron"] {
   background-size: auto;
   text-align: center;
-  background-color: black;
-  color: white;
+  color: black;
   font-family: Monoton, cursive;
 }
 td,tr,th{
@@ -33,7 +43,13 @@ td,tr,th{
   max-height: 10px;
   overflow: hidden;
 }
-.activeButton{
-  margin: 5px;
+#patientButton{
+  text-align: left;
+  width: 175px;
+  background-color: white;
+  color: black;
+}
+img[class="pill"] {
+  height: 25px;
   width: auto;
 }

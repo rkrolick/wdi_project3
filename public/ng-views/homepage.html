@@ -2,13 +2,13 @@
   <div class="row">
     <div class="col-md-3" >
       <div class="row" ng-repeat="patient in vm.patients">
-        <button type="button" class="btn btn-primary activeButton btn-lg col-md-10" ng-click="vm.active=$index">
-          {{patient.lastName}}
+        <button type="button" id="patientButton" class="btn btn-primary activeButton btn-lg col-md-10" ng-click="vm.active=$index">
+          <img src="https://pixabay.com/static/uploads/photo/2015/07/23/13/09/medicine-856933_960_720.png" class="pill" alt="" />      {{patient.lastName}}
         </button>
       </div>
 
     </div>
-    <div type="button" class="col-md-6 middle_container nav">
+    <div class="col-md-6 middle_container nav">
       <table class="table table-striped">
         <tr>
           <th>First Name:</th>
@@ -58,65 +58,21 @@
                       <td>Alcohol:</td>
                       <td>{{vm.patients[vm.active].alcohol}}
                       </tr>
-            </table>
-          </div>
-          <!-- <div class="row">
-          <div class="col-md-2">
-          <p>First Name:</p>
-          <p>Last Name:</p>
-          <p>D.O.B:</p>
-          <p>Age:</p>
-          <p>Attendant:</p>
-        </div>
-        <div class="col-md-2 ">
-        <p>{{vm.patients[vm.active].firstName}}</p>
-        <p>{{vm.patients[vm.active].lastName}}</p>
-        <p>{{vm.patients[vm.active].dob}}</p>
-        <p>{{vm.patients[vm.active].age}}</p>
-        <p>{{vm.patients[vm.active].attendingName}}</p>
-      </div>
-      <div class="col-md-1">
-      <p>Room#:</p>
-      <p>MRN:</p>
-      <p>Allergies:</p>
-      <p>Occupation:</p>
-      <p>Family History:</p>
-    </div>
-    <div class="col-md-2 col-md-offset-1">
-    <p>{{vm.patients[vm.active].roomNumber}}</p>
-    <p>{{vm.patients[vm.active].mrn}}</p>
-    <p>{{vm.patients[vm.active].allergies}}</p>
-    <p>{{vm.patients[vm.active].occupation}}</p>
-    <p>{{vm.patients[vm.active].familyHistory}}</p>
-  </div>
-  <div class="col-md-2">
-  <p>PMH:</p>
-  <p>HomeMeds:</p>
-  <p>SurgicalHx:</p>
-  <p>Smoking:</p>
-  <p>Alcohol:</p>
-</div>
-<div class="col-md-2">
-<p>{{vm.patients[vm.active].pmh}}</p>
-<p>{{vm.patients[vm.active].homeMeds}}</p>
-<p>{{vm.patients[vm.active].surgicalHx}}</p>
-<p>{{vm.patients[vm.active].smoking}}</p>
-<p>{{vm.patients[vm.active].alcohol}}</p>
-</div> -->
-<!-- </div> -->
-<div class="col-md-3" >
-  <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
-    Add Patient
-  </button>
-  <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
-    Edit Patient
-  </button>
-  <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
-    Expand Patient
-  </button>
+                    </table>
+                  </div>
+                  <div class="col-md-3" >
+                    <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
+                      Add Patient
+                    </button>
+                    <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
+                      Edit Patient
+                    </button>
+                    <button type="button" ui-sref="Expanded" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
+                      Expand Patient
+                    </button>
 
-</div>
-</div>
+                  </div>
+                </div>
 
 
-</div>
+              </div>
