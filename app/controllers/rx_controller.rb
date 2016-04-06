@@ -1,0 +1,3 @@
+class RxController < ApplicationController
+  
+end
