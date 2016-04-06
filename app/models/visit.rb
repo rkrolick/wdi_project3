@@ -4,4 +4,5 @@ class Visit < ActiveRecord::Base
   has_many :cbcs
   has_many :bmps
   has_many :ptptts
+  has_many :dxs
 end

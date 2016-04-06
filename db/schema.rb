@@ -11,33 +11,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160405183624) do
+ActiveRecord::Schema.define(version: 20160406145016) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bmps", force: :cascade do |t|
-    t.integer "na"
-    t.integer "k"
-    t.integer "cl"
-    t.integer "bicarb"
-    t.integer "bun"
-    t.integer "cr"
-    t.integer "glucose"
-    t.integer "visit_id"
+    t.integer  "na"
+    t.integer  "k"
+    t.integer  "cl"
+    t.integer  "bicarb"
+    t.integer  "bun"
+    t.integer  "cr"
+    t.integer  "glucose"
+    t.integer  "visit_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "bmps", ["visit_id"], name: "index_bmps_on_visit_id", using: :btree
 
   create_table "cbcs", force: :cascade do |t|
-    t.integer "wbc"
-    t.integer "hgb"
-    t.integer "hct"
-    t.integer "plt"
-    t.integer "visit_id"
+    t.integer  "wbc"
+    t.integer  "hgb"
+    t.integer  "hct"
+    t.integer  "plt"
+    t.integer  "visit_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "cbcs", ["visit_id"], name: "index_cbcs_on_visit_id", using: :btree
+
+  create_table "dxs", force: :cascade do |t|
+    t.string   "api_name"
+    t.string   "code"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "patients", force: :cascade do |t|
     t.string   "firstName"
@@ -67,13 +79,24 @@ ActiveRecord::Schema.define(version: 20160405183624) do
   end
 
   create_table "ptptts", force: :cascade do |t|
-    t.integer "pt"
-    t.integer "aptt"
-    t.integer "inr"
-    t.integer "visit_id"
+    t.integer  "pt"
+    t.integer  "aptt"
+    t.integer  "inr"
+    t.integer  "visit_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "ptptts", ["visit_id"], name: "index_ptptts_on_visit_id", using: :btree
+
+  create_table "rxs", force: :cascade do |t|
+    t.string   "drugName"
+    t.float    "dosage"
+    t.string   "route"
+    t.string   "frequency"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "visits", force: :cascade do |t|
     t.string   "imaging"
@@ -117,13 +140,15 @@ ActiveRecord::Schema.define(version: 20160405183624) do
   add_index "visits", ["patient_id"], name: "index_visits_on_patient_id", using: :btree
 
   create_table "vitals", force: :cascade do |t|
-    t.integer "o2Sat"
-    t.float   "temp"
-    t.integer "heartRate"
-    t.integer "systolic"
-    t.integer "diastolic"
-    t.integer "respiratoryRate"
-    t.integer "visit_id"
+    t.integer  "o2Sat"
+    t.float    "temp"
+    t.integer  "heartRate"
+    t.integer  "systolic"
+    t.integer  "diastolic"
+    t.integer  "respiratoryRate"
+    t.integer  "visit_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   add_index "vitals", ["visit_id"], name: "index_vitals_on_visit_id", using: :btree

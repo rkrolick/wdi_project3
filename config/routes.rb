@@ -3,8 +3,10 @@ Rails.application.routes.draw do
     resources :visits do
       resources :vitals
       resources :cbcs
-      resources :ptptt
-      resources :bmp
+      resources :ptptts
+      resources :bmps
+      resources :dxs
+      resources :rxs
     end
   end
   root to: redirect('/patients#/')

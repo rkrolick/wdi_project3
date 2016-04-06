@@ -6,6 +6,7 @@ class CreateCbcs < ActiveRecord::Migration
       t.integer :hct
       t.integer :plt
       t.references :visit, index: true, foreign_key: true
+      t.timestamps null: false
     end
   end
 end
