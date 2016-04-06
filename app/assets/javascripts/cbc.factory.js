@@ -9,8 +9,8 @@
   ]);
 
   function CbcFactoryFunction($resource){
-    return = $resource("http://localhost:3000/patients/:patient_id/visits/:visit_id/cbcs/:id", {}, {
+    return $resource("http://localhost:3000/patients/:patient_id/visits/:visit_id/cbcs/:id", {}, {
       update: {method: "PUT"}
     });
   }
-})
+}());
