@@ -11,6 +11,7 @@
     </div>
 
     <div class="col-md-6 middle_container nav">
+
       <table class="table table-striped">
         <tr>
           <th class="keys">First Name:</th>
@@ -19,54 +20,124 @@
           <th class="values">{{vm.patients[vm.active].lastName}}</th>
         </tr>
         <tr>
+          <td class="keys">Admit Date:</td>
+          <td class="values">{{vm.visits[0].created_at | date:'MM/dd/yyyy'}}</td>
+          <td class="keys">Chief Complaint:</td>
+          <td class="values">{{vm.visits[0].chiefComplaint}}</td>
+        </tr>
+        <tr>
           <td class="keys">D.O.B.:</td>
           <td class="values">{{vm.patients[vm.active].dob}}</td>
           <td class="keys">Age:</td>
           <td class="values">{{vm.patients[vm.active].age}}
-        </tr>
+          </tr>
           <tr>
             <td class="keys">Attending:</td>
             <td class="values">{{vm.patients[vm.active].attendingName}}</td>
             <td class="keys">Room#:</td>
             <td class="values">{{vm.patients[vm.active].roomNumber}}
-          </tr>
+            </tr>
             <tr>
               <td class="keys">MRN:</td>
               <td class="values">{{vm.patients[vm.active].mrn}}</td>
               <td class="keys">Allergies:</td>
               <td class="values">{{vm.patients[vm.active].allergies}}
-            </tr>
+              </tr>
 
               <tr>
                 <td class="keys">PMH:</td>
                 <td class="values">{{vm.patients[vm.active].pmh}}
-                <td class="keys">Surgical HX:</td>
-                <td class="values">{{vm.patients[vm.active].surgicalHx}}
-              </tr>
-                <tr>
-                  <td class="keys">Home Meds:</td>
-                  <td class="values">{{vm.patients[vm.active].homeMeds}}</td>
-                  <td class="keys">Current Meds:</td>
-                  <td class="keys">A list of current medications goes here</td>
-                </tr>
+                  <td class="keys">Surgical HX:</td>
+                  <td class="values">{{vm.patients[vm.active].surgicalHx}}
+                  </tr>
+                  <tr>
+                    <td class="keys">Home Meds:</td>
+                    <td class="values">{{vm.patients[vm.active].homeMeds}}</td>
+                    <td class="keys">Current Meds:</td>
+                    <td class="keys">A list of current medications goes here</td>
+                  </tr>
 
-                  </table>
+                </table>
+                <!-- <td class="keys">Imaging:</td>
+                <td class="values">{{vm.visits[0].imaging}}</td>
+                <td class="keys">Asessment Plan:</td>
+                <td class="values">{{vm.visits[0].assessmentPlan}}</td>
+              </tr> -->
+            </div>
+
+            <div class="col-md-3" >
+              <div class="btn-group-vertical" role="group">
+                <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
+                  Add Patient
+                </button>
+                <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
+                  Edit Patient
+                </button>
+                <button type="button" ui-sref="Expanded({patient_id: vm.activePatient.id})" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
+                  Expand Patient
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <h2>Imaging: <span class="italic">{{vm.visits[0].imaging}}</span></h2>
+              <h2>Asessment Plan: <span class="italic">{{vm.visits[0].assessmentPlan}}</span></h2>
+            </div>
+          </div>
+              <div class="row">
+                <div class="BMP col-md-8 col-md-offset-2">
+                  <div class="Labs Na">
+                    Na
+                  </div>
+                  <div class="Labs K">
+                    K
+                  </div>
+                  <div class="Labs Cl">
+                    Cl
+                  </div>
+                  <div class="Labs Bicarb">
+                    Bic
+                  </div>
+                  <div class="Labs Bun">
+                    Bun
+                  </div>
+                  <div class="Labs Cr">
+                    Cr
+                  </div>
+                  <div class="Labs Glucose">
+                    Glu
+                  </div>
                 </div>
-                <div class="col-md-3" >
-                  <div class="btn-group-vertical" role="group">
-                  <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
-                    Add Patient
-                  </button>
-                  <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
-                    Edit Patient
-                  </button>
-                  <button type="button" ui-sref="Expanded({patient_id: vm.activePatient.id})" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
-                    Expand Patient
-                  </button>
-                </div>
+              </div>
+                <div class="row">
+                  <div class="CBC col-md-4 col-md-offset-1">
+                    <div class="Labs WBC">
+                      WBC
+                    </div>
+                    <div class="Labs Hgb">
+                      Hgb
+                    </div>
+                    <div class="Labs HCT">
+                      HCT
+                    </div>
+                    <div class="Labs PLT">
+                      PLT
+                    </div>
+                  </div>
+                  <div class="PTPTT col-md-4 col-md-offset-2">
+                    <div class="Labs PT">
+                      PT
+                    </div>
+                    <div class="Labs aPTT">
+                      aPTT
+                    </div>
+                    <div class="Labs INR">
+                      INR
+                    </div>
+                  </div>
 
                 </div>
               </div>
-
-
-            </div>

@@ -3,6 +3,7 @@ class CreateDxes < ActiveRecord::Migration
     create_table :dxes do |t|
       t.string :code
       t.string :description
+      t.references :visit, index: true, foreign_key: true
       t.timestamps null: false
     end
   end

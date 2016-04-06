@@ -3,14 +3,14 @@
 (function(){
   angular
   .module("handOff")
-  .factory("CbcFactory",[
+  .factory("PtpttFactory",[
     "$resource",
-    CbcFactoryFunction
+    PtpttFactoryFunction
   ]);
 
-  function CbcFactoryFunction($resource){
-    return = $resource("http://localhost:3000/patients/:patient_id/visits/:visit_id/cbcs/:id", {}, {
+  function PtpttFactoryFunction($resource){
+    return $resource("http://localhost:3000/patients/:patient_id/visits/:visit_id/ptptts/:id", {}, {
       update: {method: "PUT"}
     });
   }
-})
+}());
