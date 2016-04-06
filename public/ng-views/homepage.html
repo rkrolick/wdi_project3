@@ -25,7 +25,7 @@
           <td class="values">{{vm.patients[vm.active].age}}
         </tr>
           <tr>
-            <td class="keys">Attendant:</td>
+            <td class="keys">Attending:</td>
             <td class="values">{{vm.patients[vm.active].attendingName}}</td>
             <td class="keys">Room#:</td>
             <td class="values">{{vm.patients[vm.active].roomNumber}}
@@ -36,47 +36,37 @@
               <td class="keys">Allergies:</td>
               <td class="values">{{vm.patients[vm.active].allergies}}
             </tr>
+
               <tr>
-                <td class="keys">Allergies:</td>
-                <td class="values">{{vm.patients[vm.active].allergies}}</td>
-                <td class="keys">Occupation:</td>
-                <td class="values">{{vm.patients[vm.active].occupation}}
+                <td class="keys">PMH:</td>
+                <td class="values">{{vm.patients[vm.active].pmh}}
+                <td class="keys">Surgical HX:</td>
+                <td class="values">{{vm.patients[vm.active].surgicalHx}}
               </tr>
                 <tr>
-                  <td class="keys">Family History:</td>
-                  <td class="values">{{vm.patients[vm.active].familyHistory}}</td>
-                  <td class="keys">PMH:</td>
-                  <td class="values">{{vm.patients[vm.active].pmh}}
+                  <td class="keys">Home Meds:</td>
+                  <td class="values">{{vm.patients[vm.active].homeMeds}}</td>
+                  <td class="keys">Current Meds:</td>
+                  <td class="keys">A list of current medications goes here</td>
                 </tr>
-                  <tr>
-                    <td class="keys">Home Meds:</td>
-                    <td class="values">{{vm.patients[vm.active].homeMeds}}</td>
-                    <td class="keys">Surgical HX:</td>
-                    <td class="values">{{vm.patients[vm.active].surgicalHx}}
-                  </tr>
-                    <tr>
-                      <td class="keys">Smoking:</td>
-                      <td class="values">{{vm.patients[vm.active].smoking}}</td>
-                      <td class="keys">Alcohol:</td>
-                      <td class="values">{{vm.patients[vm.active].alcohol}}
-                    </tr>
-                    </table>
-                  </div>
-                  <div class="col-md-3" >
-                    <div class="btn-group-vertical" role="group">
-                    <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
-                      Add Patient
-                    </button>
-                    <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
-                      Edit Patient
-                    </button>
-                    <button type="button" ui-sref="Expanded({patient_id: vm.activePatient.id})" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
-                      Expand Patient
-                    </button>
-                  </div>
 
-                  </div>
+                  </table>
+                </div>
+                <div class="col-md-3" >
+                  <div class="btn-group-vertical" role="group">
+                  <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
+                    Add Patient
+                  </button>
+                  <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
+                    Edit Patient
+                  </button>
+                  <button type="button" ui-sref="Expanded({patient_id: vm.activePatient.id})" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
+                    Expand Patient
+                  </button>
                 </div>
 
-
+                </div>
               </div>
+
+
+            </div>
