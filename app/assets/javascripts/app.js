@@ -1,12 +1,13 @@
 //= require angular
 //= require angular-resource
 //= require angular-ui-router.min
-
+window.nameofmodule = require('angular-camelcase-to-human')
 "use strict";
 
 (function(){
   angular
   .module("handOff",[
+    "camelCaseToHuman",
     "ngResource",
     "ui.router"
   ])
