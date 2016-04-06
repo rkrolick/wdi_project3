@@ -21,8 +21,8 @@ mohammed = Patient.create({
   nextOfKin: "Allah",
   nextOfKinPhoneNumber: "1-800-dial-brown-jesus",
   isolation: "Contact",
-  pmh: [7,95,3],
-  homeMeds: [4,8,2,4,23],
+  pmh: ["I10", "E11", "E78"],
+  homeMeds: ["Lisinopril 20 mg PO QD", "Simvastatin 10 mg PO QD", "Metformin 500 mg PO BID"],
   surgicalHx: "none",
   familyHistory: "none",
   smoking: true,
@@ -157,7 +157,14 @@ mohammed = Patient.create({
         description: "Disorders of lipoprotein metabolism and other lipidemias"
         })
 
-  ryankrolick = Patient.create({
+      mohamvisit1.rxs.create({
+        drugName: "Penecillin G",
+        dosage: "2.4 million units",
+        route: "IM",
+        frequency: "once daily"
+        })
+
+  ryan = Patient.create({
     firstName: "Ryan",
     lastName: "Krolick",
     mrn: 2,
@@ -171,8 +178,8 @@ mohammed = Patient.create({
     nextOfKin: "none he's literally alone in this world",
     nextOfKinPhoneNumber: "none",
     isolation: "none",
-    pmh: [1,9,6,10],
-    homeMeds: [1,2,5,7],
+    pmh: ["J45", "K21"],
+    homeMeds: ["albuterol 1 puff PRN", "Omeperazole 10 mg QD" ],
     surgicalHx: "none",
     familyHistory: "none",
     smoking: true,
@@ -182,6 +189,91 @@ mohammed = Patient.create({
     occupation: "student",
 
     })
+
+    ryan.visits.create({
+      imaging: "Doppler showed no evidence of DVT",
+      otherProcedures: "",
+       chiefComplaint: "Cellulitis",
+       loc: "AAOx3",
+       gcs: "",
+       neuroNotes: "No sensory or motor deficits",
+       rhythm: "NL Sinus Rhythm",
+       ejectionFraction: "",
+       cardioNotes: "RRR, no murmurs rubs or gallops",
+       ventSettings: "",
+       abg: "",
+       pulmonaryNotes: "No shortness of breath",
+       npo: false,
+       diet: "normal diet as tolerated",
+       tubes: "",
+       giNotes: "",
+       foley: "",
+       foleyPlaceDate: "",
+       renalNotes: "",
+       glucoseSticks: "",
+       endoNotes: "",
+       sirsSepsisAlert: "yes",
+       antibiotics: "vancomycin 15 mg/kg IV q12h",
+       cultures: "blood cultures x 3 sent",
+       idNotes: "patient afebrile with mild leukocytosis",
+       intact: "",
+       woundCare: "",
+       incision: "",
+       decubitisUlcers: "",
+       edema: "yes",
+       pt: "",
+       skinNotes: "Erythematous left thigh spreading down knee to shin. Warm to touch. Moderate edema",
+       assessmentPlan: "Cellulitis: Patient started on vanco. Monitor leukocytosis. Follow up with ID. Doppler r/o DVT."
+      })
+
+      visitId = ryan.visits.first.id
+      ryanvisit1 = ryan.visits.find(visitId)
+      ryanvisit1.vitals.create({
+        o2Sat: 100,
+        temp: 100.4,
+        heartRate: 89,
+        systolic: 130,
+        diastolic: 80,
+        respiratoryRate: 18
+      })
+
+      ryanvisit1.cbcs.create({
+        wbc: 8000,
+        hgb: 13,
+        hct: 42,
+        plt: 350000
+        })
+
+      ryanvisit1.bmps.create({
+        na: 140,
+        k: 4,
+        cl: 100,
+        bicarb: 24,
+        bun: 20,
+        cr: 0.9,
+        glucose: 210
+        })
+
+      ryanvisit1.ptptts.create({
+        pt: 11,
+        aptt: 45,
+        inr: 1
+        })
+
+      ryanvisit1.dxs.create({
+        code: "L03",
+        description: "Cellulitis and acute lymphangitis"
+        })
+
+      ryanvisit1.rxs.create({
+        drugName: "Vancomycin",
+        dosage: "15 mg/kg",
+        route: "IV",
+        frequency: "Q12"
+        })
+
+
+
   sheila = Patient.create({
     firstName: "Sheila",
     lastName: "Broflovski",
@@ -309,6 +401,10 @@ mohammed = Patient.create({
         inr: 1.1
         })
 
+      sheilavisit1.dxs.create({
+        code: "K85.9",
+        description: "Acute pancreatitis"
+        })
 
 
     butters = Patient.create({

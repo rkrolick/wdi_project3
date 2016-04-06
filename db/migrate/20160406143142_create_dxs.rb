@@ -1,4 +1,4 @@
-class CreateDxes < ActiveRecord::Migration
+class CreateDxs < ActiveRecord::Migration
   def change
     create_table :dxes do |t|
       t.string :code
