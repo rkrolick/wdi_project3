@@ -1,17 +1,15 @@
 <div class="container" ng-init="vm.init()">
   <div class="row">
+
     <div class="col-md-3 btn-group-vertical" role="group">
       <div class="row" ng-repeat="patient in vm.patients">
-
         <button type="button" id="patientButton" class="btn btn-primary activeButton btn-lg col-md-10" ng-click="vm.active=$index ; vm.setActivePatient(patient)">
           <img src="https://pixabay.com/static/uploads/photo/2015/07/23/13/09/medicine-856933_960_720.png" class="pill" alt="" />      {{patient.lastName}}
         </button>
-
       </div>
     </div>
 
     <div class="col-md-6 middle_container nav">
-
       <table class="table table-striped">
         <tr>
           <th class="keys">First Name:</th>
@@ -30,40 +28,36 @@
           <td class="values">{{vm.patients[vm.active].dob}}</td>
           <td class="keys">Age:</td>
           <td class="values">{{vm.patients[vm.active].age}}
-          </tr>
-          <tr>
-            <td class="keys">Attending:</td>
-            <td class="values">{{vm.patients[vm.active].attendingName}}</td>
-            <td class="keys">Room#:</td>
-            <td class="values">{{vm.patients[vm.active].roomNumber}}
-            </tr>
-            <tr>
-              <td class="keys">MRN:</td>
-              <td class="values">{{vm.patients[vm.active].mrn}}</td>
-              <td class="keys">Allergies:</td>
-              <td class="values">{{vm.patients[vm.active].allergies}}
-              </tr>
+        </tr>
+        <tr>
+          <td class="keys">Attending:</td>
+          <td class="values">{{vm.patients[vm.active].attendingName}}</td>
+          <td class="keys">Room#:</td>
+          <td class="values">{{vm.patients[vm.active].roomNumber}}
+        </tr>
+        <tr>
+          <td class="keys">MRN:</td>
+          <td class="values">{{vm.patients[vm.active].mrn}}</td>
+          <td class="keys">Allergies:</td>
+          <td class="values">{{vm.patients[vm.active].allergies}}
+        </tr>
+        <tr>
+          <td class="keys">PMH:</td>
+          <td class="values">{{vm.patients[vm.active].pmh}}
+          <td class="keys">Surgical HX:</td>
+          <td class="values">{{vm.patients[vm.active].surgicalHx}}
+        </tr>
+        <tr>
+          <td class="keys">Home Meds:</td>
+          <td class="values">{{vm.patients[vm.active].homeMeds}}</td>
+          <td class="keys">Current Meds:</td>
+          <td class="keys">A list of current medications goes here</td>
+        </tr>
+      </table>
+    </div>
 
-              <tr>
-                <td class="keys">PMH:</td>
-                <td class="values">{{vm.patients[vm.active].pmh}}
-                  <td class="keys">Surgical HX:</td>
-                  <td class="values">{{vm.patients[vm.active].surgicalHx}}
-                  </tr>
-                  <tr>
-                    <td class="keys">Home Meds:</td>
-                    <td class="values">{{vm.patients[vm.active].homeMeds}}</td>
-                    <td class="keys">Current Meds:</td>
-                    <td class="keys">A list of current medications goes here</td>
-                  </tr>
 
-                </table>
-                <!-- <td class="keys">Imaging:</td>
-                <td class="values">{{vm.visits[0].imaging}}</td>
-                <td class="keys">Asessment Plan:</td>
-                <td class="values">{{vm.visits[0].assessmentPlan}}</td>
-              </tr> -->
-            </div>
+
 
             <div class="col-md-3" >
               <div class="btn-group-vertical" role="group">
@@ -84,70 +78,70 @@
                 <p ng-if="vm.apiTest.Error">
                   {{vm.apiTest.Error}}
                 </p>
-
-
               </div>
-
-            </div>
-
-          </div>
-          <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-              <h2>Imaging: <span class="italic">{{vm.visits[0].imaging}}</span></h2>
-              <h2>Asessment Plan: <span class="italic">{{vm.visits[0].assessmentPlan}}</span></h2>
             </div>
           </div>
-              <div class="row">
-                <div class="BMP col-md-8 col-md-offset-2">
-                  <div class="Labs Na">
-                    {{vm.activeLabs.bmp.na}}
-                  </div>
-                  <div class="Labs K">
-                    {{vm.activeLabs.bmp.k}}
-                  </div>
-                  <div class="Labs Cl">
-                    {{vm.activeLabs.bmp.cl}}
-                  </div>
-                  <div class="Labs Bicarb">
-                    {{vm.activeLabs.bmp.bicarb}}
-                  </div>
-                  <div class="Labs Cr">
-                    {{vm.activeLabs.bmp.cr}}
-                  </div>
-                  <div class="Labs Bun">
-                    {{vm.activeLabs.bmp.bun}}
-                  </div>
-                  <div class="Labs Glucose">
-                    {{vm.activeLabs.bmp.glucose}}
-                  </div>
-                </div>
-              </div>
-                <div class="row">
-                  <div class="CBC col-md-4 col-md-offset-1">
-                    <div class="Labs WBC">
-                      {{vm.activeLabs.cbc.wbc}}
-                    </div>
-                    <div class="Labs Hgb">
-                      {{vm.activeLabs.cbc.hgb}}
-                    </div>
-                    <div class="Labs HCT">
-                      {{vm.activeLabs.cbc.hct}}
-                    </div>
-                    <div class="Labs PLT">
-                      {{vm.activeLabs.cbc.plt}}
-                    </div>
-                  </div>
-                  <div class="PTPTT col-md-4 col-md-offset-2">
-                    <div class="Labs PT">
-                      {{vm.activeLabs.ptptt.pt}}
-                    </div>
-                    <div class="Labs aPTT">
-                      {{vm.activeLabs.ptptt.aptt}}
-                    </div>
-                    <div class="Labs INR">
-                      {{vm.activeLabs.ptptt.inr}}
-                    </div>
-                  </div>
 
-                </div>
-              </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h2>Imaging: <span class="italic">{{vm.visits[0].imaging}}</span></h2>
+      <h2>Asessment Plan: <span class="italic">{{vm.visits[0].assessmentPlan}}</span></h2>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="BMP col-md-8 col-md-offset-2">
+      <div class="Labs Na">
+        {{vm.activeLabs.bmp.na}}
+      </div>
+      <div class="Labs K">
+        {{vm.activeLabs.bmp.k}}
+      </div>
+      <div class="Labs Cl">
+        {{vm.activeLabs.bmp.cl}}
+      </div>
+      <div class="Labs Bicarb">
+        {{vm.activeLabs.bmp.bicarb}}
+      </div>
+      <div class="Labs Cr">
+        {{vm.activeLabs.bmp.cr}}
+      </div>
+      <div class="Labs Bun">
+        {{vm.activeLabs.bmp.bun}}
+      </div>
+      <div class="Labs Glucose">
+        {{vm.activeLabs.bmp.glucose}}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="CBC col-md-4 col-md-offset-1">
+      <div class="Labs WBC">
+        {{vm.activeLabs.cbc.wbc}}
+      </div>
+      <div class="Labs Hgb">
+        {{vm.activeLabs.cbc.hgb}}
+      </div>
+      <div class="Labs HCT">
+        {{vm.activeLabs.cbc.hct}}
+      </div>
+      <div class="Labs PLT">
+        {{vm.activeLabs.cbc.plt}}
+      </div>
+    </div>
+    <div class="PTPTT col-md-4 col-md-offset-2">
+      <div class="Labs PT">
+        {{vm.activeLabs.ptptt.pt}}
+      </div>
+      <div class="Labs aPTT">
+        {{vm.activeLabs.ptptt.aptt}}
+      </div>
+      <div class="Labs INR">
+        {{vm.activeLabs.ptptt.inr}}
+      </div>
+    </div>
+  </div>
+
+</div>
