@@ -68,6 +68,7 @@ img[class="pill"] {
 .Labs {
   font-size: 5em;
   font-family: 'Roboto', sans-serif;
+  text-align: right
 }
 .BMP {
   background-image: url("BMP.png");
@@ -76,41 +77,47 @@ img[class="pill"] {
   background-repeat: no-repeat;
   background-position: center;
   margin: 10px;
+
 }
 .Na {
   position: relative;
   top: 10px;
-  left: 100px;
+  right: 560px;
 }
 .K {
   position: relative;
   top: 60px;
-  left: 100px;
+  right: 560px;
 }
 .Cl {
   position: relative;
   bottom: 180px;
-  left: 255px;
+  right: 70px;
+  text-align: center;
 }
 .Bicarb {
   position: relative;
   bottom: 145px;
-  left: 255px;
+  right: 70px;
+  text-align: center;
 }
 .Bun {
   position: relative;
   bottom: 245px;
   left: 430px;
+  text-align: left;
 }
 .Cr {
   position: relative;
   bottom: 475px;
   left: 430px;
+  text-align: left;
 }
 .Glucose {
   position: relative;
   bottom: 510px;
   left: 630px;
+  text-align: left;
 }
 .CBC{
   background-image: url("CBC.png");
@@ -120,29 +127,34 @@ img[class="pill"] {
   background-position: center;
   font-size: .6em;
   margin: 10px;
+
 }
 .WBC {
   position: relative;
   top: 110px;
-  right: 100px;
+  right: 330px;
 
 }
 .Hgb {
   position: relative;
-  left: 130px;
+  left: 0px;
   bottom: 0px;
+  text-align: center;
 }
 .HCT {
   position: relative;
-  left: 133px;
+  left: 0px;
   top: 70px;
+  text-align: center;
 
 }
 .PLT {
   position: relative;
   bottom: 60px;
   left: 330px;
+  text-align: left
 }
+
 .PTPTT {
   background-image: url("PTPTT.png");
   height: 300px;
@@ -150,19 +162,26 @@ img[class="pill"] {
   background-repeat: no-repeat;
   background-position: center;
   margin: 10px;
+
 }
 .PT {
   position: relative;
-  left: 50px;
+  right: 200px;
   top: 100px;
 }
 .aPTT {
   position: relative;
-  left: 250px;
+  left: 230px;
+  text-align: left;
 
 }
 .INR {
   position: relative;
-  left: 150px;
+  left: 0px;
   top: 30px;
+  text-align: center;
+}
+#Labs {
+  width: auto;
+  margin: auto;
 }

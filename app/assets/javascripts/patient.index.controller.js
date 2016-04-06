@@ -38,5 +38,4 @@
       console.log(vm.hide)
     }
   };
-  vm.setActivePatient(vm.patients[vm.active]);
 }());
