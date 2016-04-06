@@ -20,7 +20,6 @@
     vm.setActivePatient = function(pat) {
       vm.activePatient = pat;
       vm.visits = VisitFactory.query({patient_id: vm.activePatient.id});
-      console.log(vm.labs);
     };
     vm.test = function(){
       console.log(vm.hide)
