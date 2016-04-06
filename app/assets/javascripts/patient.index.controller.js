@@ -14,7 +14,8 @@
     vm.patients = PatientFactory.query();
     vm.active = 0;
     vm.setActivePatient = function(pat) {
-      vm.activePatient = pat
+      vm.activePatient = pat;
+      console.log(pat);
     };
     vm.test = function(){
       console.log(vm.hide)
