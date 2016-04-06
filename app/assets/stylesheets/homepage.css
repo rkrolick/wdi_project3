@@ -48,6 +48,7 @@ td,tr,th{
   width: 175px;
   background-color: white;
   color: black;
+  margin: 5px;
 }
 img[class="pill"] {
   height: 25px;
@@ -59,4 +60,109 @@ img[class="pill"] {
 }
 .values {
   font-style: italic;
+}
+.italic {
+  font-style: italic;
+  font-size: .6em;
+}
+.Labs {
+  font-size: 5em;
+  font-family: 'Roboto', sans-serif;
+}
+.BMP {
+  background-image: url("BMP.png");
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 10px;
+}
+.Na {
+  position: relative;
+  top: 10px;
+  left: 100px;
+}
+.K {
+  position: relative;
+  top: 60px;
+  left: 100px;
+}
+.Cl {
+  position: relative;
+  bottom: 180px;
+  left: 255px;
+}
+.Bicarb {
+  position: relative;
+  bottom: 145px;
+  left: 255px;
+}
+.Bun {
+  position: relative;
+  bottom: 245px;
+  left: 430px;
+}
+.Cr {
+  position: relative;
+  bottom: 475px;
+  left: 430px;
+}
+.Glucose {
+  position: relative;
+  bottom: 510px;
+  left: 630px;
+}
+.CBC{
+  background-image: url("CBC.png");
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: .6em;
+  margin: 10px;
+}
+.WBC {
+  position: relative;
+  top: 110px;
+  right: 100px;
+
+}
+.Hgb {
+  position: relative;
+  left: 130px;
+  bottom: 0px;
+}
+.HCT {
+  position: relative;
+  left: 133px;
+  top: 70px;
+
+}
+.PLT {
+  position: relative;
+  bottom: 60px;
+  left: 330px;
+}
+.PTPTT {
+  background-image: url("PTPTT.png");
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 10px;
+}
+.PT {
+  position: relative;
+  left: 50px;
+  top: 100px;
+}
+.aPTT {
+  position: relative;
+  left: 250px;
+
+}
+.INR {
+  position: relative;
+  left: 150px;
+  top: 30px;
 }
