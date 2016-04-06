@@ -25,6 +25,42 @@ mohammed = Patient.create({
   occupation: "student"
   })
 
+  mohammed.visits.create({
+    imaging: "CXR showed consolidation right lung susp for pneumonia",
+    otherProcedures: "Chest CT scheduled tomorrow 4-5",
+     chiefComplaint: "S.O.B. with productive cough and fever for one week",
+     loc: "AAOx3",
+     gcs: "",
+     neuroNotes: "",
+     rhythm: "NL Sinus Rhythm",
+     ejectionFraction: "",
+     cardioNotes: "",
+     ventSettings: "",
+     abg: "7.35/45/90/24/99%",
+     pulmonaryNotes: "Pt respirating well ",
+     npo: false,
+     diet: "normal diet as tolerated",
+     tubes: "",
+     giNotes: "",
+     foley: "",
+     foleyPlaceDate: "",
+     renalNotes: "",
+     glucoseSticks: "90,100,140,160,250,145",
+     endoNotes: "Insulin sliding scale monitor glucose q 4 hr",
+     sirsSepsisAlert: "yes",
+     antibiotics: "levaquin",
+     cultures: "sent sputum",
+     idNotes: "patient febrile with leukocytosis ",
+     intact: "",
+     woundCare: "",
+     incision: "",
+     decubitisUlcers: "",
+     edema: "none",
+     pt: "",
+     skinNotes: "",
+     assessmentPlan: "Patient on broad spectrum antibiotics until sputum gram stain and culture return. Continue maintenance fluid. Monitor labs"
+    })
+
   ryankrolick = Patient.create({
     firstName: "Ryan",
     lastName: "Krolick",
@@ -100,41 +136,7 @@ mohammed = Patient.create({
     occupation: "student",
     })
 
-mohammed.visits.create({
-  imaging: "CXR showed consolidation right lung susp for pneumonia",
-  otherProcedures: "Chest CT scheduled tomorrow 4-5",
-   chiefComplaint: "S.O.B. with productive cough and fever for one week",
-   loc: "AAOx3",
-   gcs: "",
-   neuroNotes: "",
-   rhythm: "NL Sinus Rhythm",
-   ejectionFraction: "",
-   cardioNotes: "",
-   ventSettings: "",
-   abg: "7.35/45/90/24/99%",
-   pulmonaryNotes: "Pt respirating well ",
-   npo: false,
-   diet: "normal diet as tolerated",
-   tubes: "",
-   giNotes: "",
-   foley: "",
-   foleyPlaceDate: "",
-   renalNotes: "",
-   glucoseSticks: "90,100,140,160,250,145",
-   endoNotes: "Insulin sliding scale monitor glucose q 4 hr",
-   sirsSepsisAlert: "yes",
-   antibiotics: "levaquin",
-   cultures: "sent sputum",
-   idNotes: "patient febrile with leukocytosis ",
-   intact: "",
-   woundCare: "",
-   incision: "",
-   decubitisUlcers: "",
-   edema: "none",
-   pt: "",
-   skinNotes: "",
-   assessmentPlan: "Patient on broad spectrum antibiotics until sputum gram stain and culture return. Continue maintenance fluid. Monitor labs"
-  })
+
 
   sheila.visits.create({
     imaging: "US inconclusive, scheduled for CT today",
