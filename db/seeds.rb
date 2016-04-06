@@ -1,4 +1,11 @@
 Patient.destroy_all
+Visit.destroy_all
+Vital.destroy_all
+Cbc.destroy_all
+Bmp.destroy_all
+Ptptt.destroy_all
+Rx.destroy_all
+Dx.destroy_all
 
 mohammed = Patient.create({
   firstName: "Mohammed",
@@ -143,7 +150,7 @@ mohammed = Patient.create({
         code: "A51",
         description: "Early syphilis"
         })
-      mohamsvisit1.dxs.create({
+      mohamvisit1.dxs.create({
         code: "E78",
         description: "Disorders of lipoprotein metabolism and other lipidemias"
         })

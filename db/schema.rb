@@ -43,13 +43,15 @@ ActiveRecord::Schema.define(version: 20160406145016) do
 
   add_index "cbcs", ["visit_id"], name: "index_cbcs_on_visit_id", using: :btree
 
-  create_table "dxs", force: :cascade do |t|
-    t.string   "api_name"
+  create_table "dxes", force: :cascade do |t|
     t.string   "code"
     t.string   "description"
+    t.integer  "visit_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  add_index "dxes", ["visit_id"], name: "index_dxes_on_visit_id", using: :btree
 
   create_table "patients", force: :cascade do |t|
     t.string   "firstName"
@@ -89,14 +91,17 @@ ActiveRecord::Schema.define(version: 20160406145016) do
 
   add_index "ptptts", ["visit_id"], name: "index_ptptts_on_visit_id", using: :btree
 
-  create_table "rxs", force: :cascade do |t|
+  create_table "rxes", force: :cascade do |t|
     t.string   "drugName"
     t.float    "dosage"
     t.string   "route"
     t.string   "frequency"
+    t.integer  "visit_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "rxes", ["visit_id"], name: "index_rxes_on_visit_id", using: :btree
 
   create_table "visits", force: :cascade do |t|
     t.string   "imaging"
@@ -155,7 +160,9 @@ ActiveRecord::Schema.define(version: 20160406145016) do
 
   add_foreign_key "bmps", "visits"
   add_foreign_key "cbcs", "visits"
+  add_foreign_key "dxes", "visits"
   add_foreign_key "ptptts", "visits"
+  add_foreign_key "rxes", "visits"
   add_foreign_key "visits", "patients"
   add_foreign_key "vitals", "visits"
 end
