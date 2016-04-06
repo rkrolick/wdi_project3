@@ -13,26 +13,29 @@ Angular.js front end: version 1.5.2
 
 System Dependencies:
 --------------------
- JS? Angular? really nothing its afucking weba pp wtf does this mean.
- Must have Ruby on Rails installed.
+This app uses AngularJS camelCase to Human Filter.
+https://github.com/jdpedrie/angularjs-camelCase-to-human-filter
+
+
+Also uses Browserify Rails.
+https://github.com/browserify-rails/browserify-rails
+
 
 Configuration and Installation Instructions:
----------------------------
+--------------------------------------------
 1. Download the app to a directory.
-
-2. Run Bundle Install.
-
-3. Start a rails server using command "rails server"
-
-4. Navigate to http://localhost:3000
-
-5. Open the index file.
+2. In terminal, run Bundle install
+3. Run $ npm install
+4. run $ npm install --save angular-camelcase-to-human
+5. Start a rails server using command "rails server"
+6. Navigate to http://localhost:3000
+7. Open the index file.
 
 
 Copyright and Licensing information
 -----------------------------------
 
-ICD 
+ICD
 
 
 

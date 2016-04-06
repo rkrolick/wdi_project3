@@ -104,7 +104,7 @@ mohammed = Patient.create({
        assessmentPlan: "Patient presents with primary syphyllis. RPR and VDRL positive. Started on Penecillin G."
       })
 
-      visitId = mohammed.visits.first.id
+      visitId = mohammed.visits.last.id
       mohamvisit1 = mohammed.visits.find(visitId)
       mohamvisit1.vitals.create({
         o2Sat: 100,
@@ -226,7 +226,7 @@ mohammed = Patient.create({
        assessmentPlan: "Cellulitis: Patient started on vanco. Monitor leukocytosis. Follow up with ID. Doppler r/o DVT."
       })
 
-      visitId = ryan.visits.first.id
+      visitId = ryan.visits.last.id
       ryanvisit1 = ryan.visits.find(visitId)
       ryanvisit1.vitals.create({
         o2Sat: 100,
@@ -335,7 +335,7 @@ mohammed = Patient.create({
        assessmentPlan: "causeeee kyles moms a bitch shes a big fat bitch shes the biggest bitch in the whole wide world shes a stupid bitch if tehre ever was a bitch shes a bitch to all the boys an girls"
 
       })
-      visitId = sheila.visits.first.id
+      visitId = sheila.visits.last.id
       sheilavisit1 = sheila.visits.find(visitId)
       sheilavisit1.vitals.create({
         o2Sat: 100,
@@ -367,38 +367,6 @@ mohammed = Patient.create({
         pt: 13,
         aptt: 38,
         inr: 1.2
-        })
-
-      sheilavisit1.vitals.create({
-        o2Sat: 97,
-        temp: 101,
-        heartRate: 145,
-        systolic: 108,
-        diastolic: 86,
-        respiratoryRate: 31
-        })
-
-      sheilavisit1.cbcs.create({
-        wbc: 8000,
-        hgb: 8.7,
-        hct: 34,
-        plt: 320000
-        })
-
-      sheilavisit1.bmps.create({
-        na: 134,
-        k: 4,
-        cl: 100,
-        bicarb: 19,
-        bun: 27,
-        cr: 0.8,
-        glucose: 136
-        })
-
-      sheilavisit1.ptptts.create({
-        pt: 14,
-        aptt: 37,
-        inr: 1.1
         })
 
       sheilavisit1.dxs.create({
@@ -501,7 +469,7 @@ mohammed = Patient.create({
        assessmentPlan: "Patient for surgery tomorrow"
 
       })
-    visitId = mrgarrison.visits.first.id
+    visitId = mrgarrison.visits.last.id
     mrgarrisonvisit1 = mrgarrison.visits.find(visitId)
     mrgarrisonvisit1.vitals.create({
       o2Sat: 100,
@@ -533,6 +501,113 @@ mohammed = Patient.create({
       pt: 12,
       aptt: 40,
       inr: 1.0
+      })
+
+randy = Patient.create({
+  firstName: "Randy",
+  lastName: "Marsh",
+  mrn: 96,
+  attendingName: "Dr. Bajwa",
+  roomNumber: 741,
+  codeStatus: "Full Code",
+  dob: "4-20-1971",
+  age: 45,
+  allergies: "none",
+  diet: "Normal Diet",
+  nextOfKin: "Sharon Marsh",
+  nextOfKinPhoneNumber: "555-555-5555",
+  isolation: "none",
+  pmh: ["C62.9", "F10"],
+  homeMeds: ["none"],
+  surgicalHx: "none",
+  familyHistory: "none",
+  smoking: false,
+  alcohol: true,
+  drugs: true,
+  psychHx: "none",
+  occupation: "Geologist"
+  })
+
+  randy.visits.create({
+    imaging: "Spiral CT showed saddle embolus",
+    otherProcedures: "none",
+    chiefComplaint: "Pulmonary Embolus - I26.02",
+     loc: "AAOx3",
+     gcs: "",
+     neuroNotes: "",
+     rhythm: "NSR",
+     ejectionFraction: "50%",
+     cardioNotes: "Seen by cardio, take recs from Pulmonary",
+     ventSettings: "n/a",
+     abg: "7.26/60/82/18/87%",
+     pulmonaryNotes: "Patient has suffered severe saddle embolus.",
+     npo: false,
+     diet: "liquid diet",
+     tubes: "",
+     giNotes: "",
+     foley: "",
+     foleyPlaceDate: "",
+     renalNotes: "",
+     glucoseSticks: "",
+     endoNotes: "",
+     sirsSepsisAlert: "",
+     antibiotics: "",
+     cultures: "",
+     idNotes: "",
+     intact: "",
+     woundCare: "",
+     incision: "",
+     decubitisUlcers: "",
+     edema: "",
+     pt: "",
+     skinNotes: "",
+     assessmentPlan: "Saddle Embolus - I26.02"
+
+    })
+    visitId = randy.visits.last.id
+    randyvisit1 = randy.visits.find(visitId)
+    randyvisit1.vitals.create({
+      o2Sat: 87,
+      temp: 99,
+      heartRate: 120,
+      systolic: 180,
+      diastolic: 128,
+      respiratoryRate: 33
+      })
+
+    randyvisit1.cbcs.create({
+      wbc: 4000,
+      hgb: 14,
+      hct: 40,
+      plt: 128000
+      })
+
+    randyvisit1.bmps.create({
+      na: 140,
+      k: 4,
+      cl: 100,
+      bicarb: 24,
+      bun: 20,
+      cr: 0.9,
+      glucose: 135
+      })
+
+    randyvisit1.ptptts.create({
+      pt: 10,
+      aptt: 40,
+      inr: 1.0
+      })
+
+    randyvisit1.dxs.create({
+      code: "K85.9",
+      description: "Acute pancreatitis"
+      })
+
+    randyvisit1.rxs.create({
+      drugName: "tPA ",
+      dosage: "87 mg",
+      route: "IV Push",
+      frequency: "once"
       })
 
 
