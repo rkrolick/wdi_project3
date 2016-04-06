@@ -9,17 +9,22 @@
     "CbcFactory",
     "PtpttFactory",
     "BmpFactory",
+    "ApiFactory",
     "$resource",
     PatientControllerFunction
   ]);
 
-  function PatientControllerFunction(PatientFactory, VisitFactory, CbcFactory, PtpttFactory, BmpFactory){
+  function PatientControllerFunction(PatientFactory, VisitFactory, CbcFactory, PtpttFactory, BmpFactory, ApiFactory){
     var vm = this;
     vm.patients = PatientFactory.query();
     vm.active = 0;
     vm.activeLabs = {cbcs: null, ptptts: null, bmps: null};
     vm.activeLatestVisit = null;
+    vm.apiCall = function(dx){
+      console.log(dx);
+      vm.apiTest = ApiFactory.get({query: dx});
 
+    };
     vm.setActivePatient = function(pat) {
       vm.activePatient = pat;
       vm.visits = VisitFactory.query({patient_id: vm.activePatient.id}).$promise.then(function(data){
