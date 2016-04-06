@@ -17,13 +17,13 @@ ActiveRecord::Schema.define(version: 20160406145016) do
   enable_extension "plpgsql"
 
   create_table "bmps", force: :cascade do |t|
-    t.integer  "na"
+    t.float    "na"
     t.float    "k"
-    t.integer  "cl"
-    t.integer  "bicarb"
-    t.integer  "bun"
+    t.float    "cl"
+    t.float    "bicarb"
+    t.float    "bun"
     t.float    "cr"
-    t.integer  "glucose"
+    t.float    "glucose"
     t.integer  "visit_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
