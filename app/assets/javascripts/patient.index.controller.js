@@ -19,14 +19,7 @@
     vm.active = 0;
     vm.setActivePatient = function(pat) {
       vm.activePatient = pat;
-      vm.visits = VisitFactory.query({patient_id: vm.activePatient.id}).then(function(data){
-        // get the index of the most recent visit.
-        var i = vm.visits.length-1;
-        console.log(i);
-      });
-      //vm.labs.cbcs = CbcFactory.query({patient_id: vm.activePatient.id, visit_id: vm.visits[i].id});
-      //vm.labs.ptptts = PtpttFactory.query({patient_id: vm.activePatient.id, visit_id: vm.visits[i].id});
-      //vm.labs.bmps = BmpFactory.query({patient_id: vm.activePatient.id, visit_id: vm.visits[i].id});
+      vm.visits = VisitFactory.query({patient_id: vm.activePatient.id});
       console.log(vm.labs);
     };
     vm.test = function(){
