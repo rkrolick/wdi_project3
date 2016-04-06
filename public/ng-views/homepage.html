@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-init="vm.init()">
   <div class="row">
     <div class="col-md-3 btn-group-vertical" role="group">
       <div class="row" ng-repeat="patient in vm.patients">
@@ -21,9 +21,9 @@
         </tr>
         <tr>
           <td class="keys">Admit Date:</td>
-          <td class="values">{{vm.latestVisit.created_at | date:'MM/dd/yyyy'}}</td>
+          <td class="values">{{vm.activeLatestVisit.created_at | date:'MM/dd/yyyy'}}</td>
           <td class="keys">Chief Complaint:</td>
-          <td class="values">{{vm.latestVisit.chiefComplaint}}</td>
+          <td class="values">{{vm.activeLatestVisit.chiefComplaint}}</td>
         </tr>
         <tr>
           <td class="keys">D.O.B.:</td>
@@ -89,53 +89,53 @@
           </div>
               <div class="row">
                 <div class="BMP col-md-8 col-md-offset-2">
-                  <div class="Labs Na" id="Labs">
-                    Na
+                  <div class="Labs Na">
+                    {{vm.activeLabs.bmp.na}}
                   </div>
-                  <div class="Labs K" id="Labs">
-                    K
+                  <div class="Labs K">
+                    {{vm.activeLabs.bmp.k}}
                   </div>
-                  <div class="Labs Cl" id="Labs">
-                    Cl
+                  <div class="Labs Cl">
+                    {{vm.activeLabs.bmp.cl}}
                   </div>
-                  <div class="Labs Bicarb" id="Labs">
-                    Bic
+                  <div class="Labs Bicarb">
+                    {{vm.activeLabs.bmp.bicarb}}
                   </div>
-                  <div class="Labs Bun" id="Labs">
-                    Bun
+                  <div class="Labs Cr">
+                    {{vm.activeLabs.bmp.cr}}
                   </div>
-                  <div class="Labs Cr" id="Labs">
-                    Cr
+                  <div class="Labs Bun">
+                    {{vm.activeLabs.bmp.bun}}
                   </div>
-                  <div class="Labs Glucose" id="Labs">
-                    Glu
+                  <div class="Labs Glucose">
+                    {{vm.activeLabs.bmp.glucose}}
                   </div>
                 </div>
               </div>
                 <div class="row">
                   <div class="CBC col-md-4 col-md-offset-1">
-                    <div class="Labs WBC" id="Labs">
-                      WBC
+                    <div class="Labs WBC">
+                      {{vm.activeLabs.cbc.wbc}}
                     </div>
-                    <div class="Labs Hgb" id="Labs">
-                      Hgb
+                    <div class="Labs Hgb">
+                      {{vm.activeLabs.cbc.hgb}}
                     </div>
-                    <div class="Labs HCT" id="Labs">
-                      HCT
+                    <div class="Labs HCT">
+                      {{vm.activeLabs.cbc.hct}}
                     </div>
-                    <div class="Labs PLT" id="Labs">
-                      PLT
+                    <div class="Labs PLT">
+                      {{vm.activeLabs.cbc.plt}}
                     </div>
                   </div>
                   <div class="PTPTT col-md-4 col-md-offset-2">
-                    <div class="Labs PT" id="Labs">
-                      PT
+                    <div class="Labs PT">
+                      {{vm.activeLabs.ptptt.pt}}
                     </div>
-                    <div class="Labs aPTT" id="Labs">
-                      aPTT
+                    <div class="Labs aPTT">
+                      {{vm.activeLabs.ptptt.aptt}}
                     </div>
-                    <div class="Labs INR" id="Labs">
-                      INR
+                    <div class="Labs INR">
+                      {{vm.activeLabs.ptptt.inr}}
                     </div>
                   </div>
 

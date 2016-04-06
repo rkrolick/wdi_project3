@@ -18,11 +18,11 @@ ActiveRecord::Schema.define(version: 20160406145016) do
 
   create_table "bmps", force: :cascade do |t|
     t.integer  "na"
-    t.integer  "k"
+    t.float    "k"
     t.integer  "cl"
     t.integer  "bicarb"
     t.integer  "bun"
-    t.integer  "cr"
+    t.float    "cr"
     t.integer  "glucose"
     t.integer  "visit_id"
     t.datetime "created_at", null: false
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20160406145016) do
 
   create_table "cbcs", force: :cascade do |t|
     t.integer  "wbc"
-    t.integer  "hgb"
+    t.float    "hgb"
     t.integer  "hct"
     t.integer  "plt"
     t.integer  "visit_id"
