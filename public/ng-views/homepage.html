@@ -67,6 +67,14 @@
         <button type="button" ui-sref="Expanded({patient_id: vm.activePatient.id})" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
           Expand Patient
         </button>
+        <input type="search" name="name" placeholder="ICD-10 Code" ng-model="vm.dx">
+        <button type="submit" name="button" ng-click="vm.apiCall(vm.dx)">Submit</button>
+        <p ng-if="vm.apiTest.Description">
+          {{vm.apiTest.Description}}
+        </p>
+        <p ng-if="vm.apiTest.Error">
+          {{vm.apiTest.Error}}
+        </p>
       </div>
     </div>
   </div>
@@ -77,6 +85,7 @@
       <h2>Asessment Plan: <span class="italic">{{vm.visits[0].assessmentPlan}}</span></h2>
     </div>
   </div>
+
 
   <div class="row">
     <div class="BMP col-md-8 col-md-offset-2">
