@@ -9,6 +9,7 @@ class CreateBmps < ActiveRecord::Migration
       t.integer :cr
       t.integer :glucose
       t.references :visit, index: true, foreign_key: true
+      t.timestamps null: false
     end
   end
 end

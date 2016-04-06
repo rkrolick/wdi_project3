@@ -8,6 +8,7 @@ class CreateVitals < ActiveRecord::Migration
       t.integer :diastolic
       t.integer :respiratoryRate
       t.references :visit, index: true, foreign_key: true
+      t.timestamps null: false
     end
   end
 end
