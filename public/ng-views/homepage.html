@@ -21,9 +21,9 @@
         </tr>
         <tr>
           <td class="keys">Admit Date:</td>
-          <td class="values">{{vm.visits[0].created_at | date:'MM/dd/yyyy'}}</td>
+          <td class="values">{{vm.latestVisit.created_at | date:'MM/dd/yyyy'}}</td>
           <td class="keys">Chief Complaint:</td>
-          <td class="values">{{vm.visits[0].chiefComplaint}}</td>
+          <td class="values">{{vm.latestVisit.chiefComplaint}}</td>
         </tr>
         <tr>
           <td class="keys">D.O.B.:</td>
