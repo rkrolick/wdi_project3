@@ -1,6 +1,6 @@
-class CreateDxs < ActiveRecord::Migration
+class CreateDxes < ActiveRecord::Migration
   def change
-    create_table :dxs do |t|
+    create_table :dxes do |t|
       t.string :code
       t.string :description
       t.timestamps null: false

@@ -43,8 +43,7 @@ ActiveRecord::Schema.define(version: 20160406145016) do
 
   add_index "cbcs", ["visit_id"], name: "index_cbcs_on_visit_id", using: :btree
 
-  create_table "dxs", force: :cascade do |t|
-    t.string   "api_name"
+  create_table "dxes", force: :cascade do |t|
     t.string   "code"
     t.string   "description"
     t.datetime "created_at",  null: false

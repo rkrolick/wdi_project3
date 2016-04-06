@@ -131,19 +131,19 @@ mohammed = Patient.create({
         inr: 1
         })
 
-      mohamvisit1.dxs.create({
+      mohamvisit1.dxes.create({
         code: "I10",
         description: "Essential hypertension"
         })
-      mohamvisit1.dxs.create({
+      mohamvisit1.dxes.create({
         code: "E11",
         description: "Type 2 diabetes mellitus"
         })
-      mohamvisit1.dxs.create({
+      mohamvisit1.dxes.create({
         code: "A51",
         description: "Early syphilis"
         })
-      mohamsvisit1.dxs.create({
+      mohamsvisit1.dxes.create({
         code: "E78",
         description: "Disorders of lipoprotein metabolism and other lipidemias"
         })
