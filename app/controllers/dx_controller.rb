@@ -1,0 +1,3 @@
+class DxController < ApplicationController
+  
+end
