@@ -46,5 +46,9 @@
         vm.setActivePatient(data[0]);
       })
     }
+
+    vm.deleteActive = function(){
+      console.log("TEST!!!");
+    }
   };
 }());

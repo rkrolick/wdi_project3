@@ -4,7 +4,7 @@
     <div class="col-md-3 btn-group-vertical" role="group">
       <div class="row" ng-repeat="patient in vm.patients">
         <button type="button" id="patientButton" class="btn btn-primary activeButton btn-lg col-md-10" ng-click="vm.active=$index ; vm.setActivePatient(patient)">
-          <img src="https://pixabay.com/static/uploads/photo/2015/07/23/13/09/medicine-856933_960_720.png" class="pill" alt="" />      {{patient.lastName}}
+          <img src="https://pixabay.com/static/uploads/photo/2015/07/23/13/09/medicine-856933_960_720.png" class="pill" alt="" />{{patient.lastName}}
         </button>
       </div>
     </div>
@@ -61,8 +61,8 @@
         <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
           Add Patient
         </button>
-        <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
-          Edit Patient
+        <button type="button" class="btn btn-primary btn-lg" id="activeButton" ng-click="vm.deleteActive()">
+          Delete Patient
         </button>
         <button type="button" ui-sref="Expanded({patient_id: vm.activePatient.id})" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
           Expand Patient
