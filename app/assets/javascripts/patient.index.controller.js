@@ -29,14 +29,13 @@
       vm.activePatient = pat;
       vm.visits = VisitFactory.query({patient_id: vm.activePatient.id}).$promise.then(function(data){
         if (data.length > 0) {
-          var i = data.length-1;
-          vm.activeLabs.cbcs = CbcFactory.query({patient_id: vm.activePatient.id, visit_id: data[i].id})
-            .$promise.then(function(data){var i = data.length-1; vm.activeLabs.cbc = data[i];});
-          vm.activeLabs.ptptts = PtpttFactory.query({patient_id: vm.activePatient.id, visit_id: data[i].id})
-            .$promise.then(function(data){var i = data.length-1; vm.activeLabs.ptptt = data[i];});
-          vm.activeLabs.bmps = BmpFactory.query({patient_id: vm.activePatient.id, visit_id: data[i].id})
-            .$promise.then(function(data){var i = data.length-1; vm.activeLabs.bmp = data[i];});
-          vm.activeLatestVisit = data[i];
+          vm.activeLabs.cbcs = CbcFactory.query({patient_id: vm.activePatient.id, visit_id: data[0].id})
+            .$promise.then(function(data){vm.activeLabs.cbc = data[0];});
+          vm.activeLabs.ptptts = PtpttFactory.query({patient_id: vm.activePatient.id, visit_id: data[0].id})
+            .$promise.then(function(data){vm.activeLabs.ptptt = data[0];});
+          vm.activeLabs.bmps = BmpFactory.query({patient_id: vm.activePatient.id, visit_id: data[0].id})
+            .$promise.then(function(data){vm.activeLabs.bmp = data[0];});
+          vm.activeLatestVisit = data[0];
         } else {
           vm.activeLatestVisit = null;
         }
