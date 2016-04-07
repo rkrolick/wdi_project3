@@ -194,3 +194,10 @@ footer img {
 	height: 200px;
 	width: auto;
 }
+
+.logo {
+	height: 250px;
+	width: auto;
+	margin-top: 20px;
+	margin-left: 20px;
+}
