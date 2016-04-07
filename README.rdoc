@@ -3,7 +3,7 @@
 What is it?
 -----------
 
-Welcome to HandOff! A simple and beautiful patient management solution for interns and residents. As a medical student, I noticed one thing. The hoops through which residents had to jump to simply sign out their patients to the next team were cumbersome and insecure. The aim of the Hand-Off (c)(tm) team is to provide a secure, organized and homogenized patient organization system.
+Welcome to HandOff! A simple and beautiful patient management solution for interns and residents. As a medical student in an ever-evolving technological world, we see shortcomings. The hoops through which residents had to jump to simply sign out their patients to the next team were cumbersome and insecure. The aim of the Hand-Off (c)(tm) team is to provide a secure, organized and homogenized patient organization system.
 
 Language Versions
 -----------------
@@ -21,7 +21,7 @@ Also uses Browserify Rails.
 https://github.com/browserify-rails/browserify-rails
 
 
-Configuration and Installation Instructions:
+Local Configuration and Installation Instructions:
 --------------------------------------------
 1. Download the app to a directory.
 2. In terminal, run Bundle install
@@ -31,44 +31,26 @@ Configuration and Installation Instructions:
 6. Navigate to http://localhost:3000
 7. Open the index file.
 
+Bugs/Concerns
+-------------
+
+Currently the app is still under construction. Full CRUD infrastructure is complete on the back-end. Front end to come soon.
+
+Still working on implementing full API function, as well as acquiring API key for a prescription medication database.
+
 
 Copyright and Licensing information
 -----------------------------------
 
-ICD
+Copyright Team DadBod 2016
 
+Team Dad Bod is:
 
+Mohamed Chalal- mohamedrchalal@gmail.com
+Ryan Krolick- rkrolick@gmail.com
+Vijender Bajwa- vbajwamd@gmail.com
 
-
-
-
-
-
-
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Special thanks to
+-------------------------------
+Brian Fritz from ICD-10 API
+http://icd10api.com/
