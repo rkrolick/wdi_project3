@@ -52,7 +52,7 @@
     }
 
     vm.deleteActive = function(){
-      console.log("TEST!!!");
+      vm.activePatient.$delete({url: "/patients/1"});
     }
   };
 }());

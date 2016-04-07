@@ -1,11 +1,13 @@
 @font-face {
-font-family: 'Mathilde';
+	font-family:"Optima";
+	src: local('Optima'), url('unicode.optima.ttf') format('ttf'));
+/*font-family: 'Mathilde';
 font-style: normal;
 font-weight: normal;
-src: local('Mathilde'), url('mathilde.woff') format('woff');
+src: local('Mathilde'), url('mathilde.woff') format('woff');*/
 }
 img {
-  height: 200px;
+  height: 100px;
   width: auto;
 }
 main {
@@ -36,7 +38,8 @@ div[class="jumbotron"] {
   background-size: auto;
   text-align: center;
   color: black;
-  font-family: Monoton, cursive;
+  font-family: Optima;
+  height: 150px;
 }
 td,tr,th{
   width: 200px;
