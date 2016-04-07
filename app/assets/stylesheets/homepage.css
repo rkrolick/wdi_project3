@@ -1,8 +1,8 @@
 @font-face {
 	font-family:"Optima";
-	src: local('Optima'), url('unicode.optima.ttf') format('ttf'));
-
+	src: local('Optima'), url('unicode.optima.ttf') format('ttf');
 }
+
 img {
   height: 100px;
   width: auto;
