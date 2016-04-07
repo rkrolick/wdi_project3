@@ -1,10 +1,6 @@
 @font-face {
 	font-family:"Optima";
-	src: local('Optima'), url('unicode.optima.ttf') format('ttf'));
-/*font-family: 'Mathilde';
-font-style: normal;
-font-weight: normal;
-src: local('Mathilde'), url('mathilde.woff') format('woff');*/
+	src: local('Optima'), url('unicode.optima.ttf') format('ttf');
 }
 img {
   height: 100px;
@@ -187,4 +183,13 @@ img[class="pill"] {
 #Labs {
   width: auto;
   margin: auto;
+}
+footer {
+	margin: 30px;
+	height: 200px;
+	padding: 15px;
+}
+footer img {
+	height: 200px;
+	width: auto;
 }
