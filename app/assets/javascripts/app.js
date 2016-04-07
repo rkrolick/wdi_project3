@@ -30,5 +30,11 @@ window.nameofmodule = require('angular-camelcase-to-human')
       controller: "VisitIndexController",
       controllerAs: "vm"
     })
+    .state("Create"), {
+      url: "/create",
+      templateUrl: "ng-views/createForm.html",
+      controller: "PatientCreateController",
+      controllerAs: "vm"
+    }
   }
 })();
