@@ -1,10 +1,7 @@
 @font-face {
 	font-family:"Optima";
 	src: local('Optima'), url('unicode.optima.ttf') format('ttf'));
-/*font-family: 'Mathilde';
-font-style: normal;
-font-weight: normal;
-src: local('Mathilde'), url('mathilde.woff') format('woff');*/
+
 }
 img {
   height: 100px;
