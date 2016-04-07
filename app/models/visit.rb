@@ -1,9 +1,9 @@
 class Visit < ActiveRecord::Base
   belongs_to :patient
-  has_many :vitals
-  has_many :cbcs
-  has_many :bmps
-  has_many :ptptts
-  has_many :dxs
-  has_many :rxs
+  has_many :vitals, dependent: :destroy
+  has_many :cbcs, dependent: :destroy
+  has_many :bmps, dependent: :destroy
+  has_many :ptptts, dependent: :destroy
+  has_many :dxs, dependent: :destroy
+  has_many :rxs, dependent: :destroy
 end
