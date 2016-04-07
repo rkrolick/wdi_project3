@@ -185,3 +185,19 @@ img[class="pill"] {
   width: auto;
   margin: auto;
 }
+footer {
+	margin: 30px;
+	height: 200px;
+	padding: 15px;
+}
+footer img {
+	height: 200px;
+	width: auto;
+}
+
+.logo {
+	height: 250px;
+	width: auto;
+	margin-top: 20px;
+	margin-left: 20px;
+}

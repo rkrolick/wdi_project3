@@ -4,13 +4,18 @@
   .controller("PatientCreateController", [
     "PatientFactory",
     "$stateParams",
+    "$state",
     PatientCreateFunction
   ]);
 
-  function PatientCreateFunction(PatientFactory, $stateParams){
-    var vm = this;
-    vm.create = PatientFactory.query();
-  };
+  function PatientCreateFunction(PatientFactory, $stateParams, $state){
+    this.patient = new PatientFactory();
+
+    this.create = function(){
+      this.patient.$save();
+      $state.go("Home", {}, {reload: true});
+    }
+  }
 }());
 //
 // vm.firstName

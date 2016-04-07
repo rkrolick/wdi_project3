@@ -1,24 +1,26 @@
 <form class="form form-striped">
 
-    <label class="keys">First Name:</label>
-    <input class="values" data-ng-model="vm.firstName"></input>
-    <label class="keys">Last Name:</label>
-    <input class="values" data-ng-model="vm.lastName"></input>
+    <label class="keys">First Name:</label><br>
+    <input class="values" data-ng-model="vm.patient.firstName"></input><br>
+    <label class="keys">Last Name:</label><br>
+    <input class="values" data-ng-model="vm.patient.lastName"></input><br>
 
-    <label class="keys">D.O.B.:</label>
-    <input class="values" data-ng-model="vm.dob"></input>
-    <label class="keys">Age:</label>
-    <input class="values" data-ng-model="vm.age">
+    <label class="keys">D.O.B.:</label><br>
+    <input class="values" data-ng-model="vm.patient.dob"></input><br>
+    <label class="keys">Age:</label><br>
+    <input class="values" data-ng-model="vm.patient.age"><br>
 
-    <label class="keys">Attending:</label>
-    <input class="values" data-ng-model="vm.attending"></input>
-    <label class="keys">Room#:</label>
-    <input class="values" data-ng-model="vm.room">
+    <label class="keys">Attending:</label><br>
+    <input class="values" data-ng-model="vm.patient.attending"></input><br>
+    <label class="keys">Room#:</label><br>
+    <input class="values" data-ng-model="vm.patient.room"><br>
 
-    <label class="keys">MRN:</label>
-    <input class="values" data-ng-model="vm.mrn"></input>
-    <label class="keys">Allergies:</label>
-    <input class="values" data-ng-model="vm.allergies">
+    <label class="keys">MRN:</label><br>
+    <input class="values" data-ng-model="vm.patient.mrn"></input><br>
+    <label class="keys">Allergies:</label><br>
+    <input class="values" data-ng-model="vm.patient.allergies"><br>
+    <br>
+    <button type="button" class="btn btn-primary btn-lg" data-ng-click="vm.create()">Create</button><br>
 
 
 </form>
