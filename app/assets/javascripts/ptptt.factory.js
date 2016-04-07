@@ -9,7 +9,7 @@
   ]);
 
   function PtpttFactoryFunction($resource){
-    return $resource("http://localhost:3000/patients/:patient_id/visits/:visit_id/ptptts/:id", {}, {
+    return $resource("/patients/:patient_id/visits/:visit_id/ptptts/:id", {}, {
       update: {method: "PUT"}
     });
   }

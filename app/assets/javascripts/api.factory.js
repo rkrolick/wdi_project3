@@ -9,7 +9,7 @@
   ]);
 
   function ApiFactoryFunction($resource){
-    return $resource("http://localhost:3000/dx/:query", {}, {
+    return $resource("/dx/:query", {}, {
       update: {method: "PUT"}
     });
   }
