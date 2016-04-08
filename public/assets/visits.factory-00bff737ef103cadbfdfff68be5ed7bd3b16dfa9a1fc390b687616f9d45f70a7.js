@@ -9,7 +9,7 @@
   ]);
 
   function VisitFactoryFunction($resource){
-    return $resource("/patients/:patient_id/visits/:id", {}, {
+    return $resource("http://localhost:3000/patients/:patient_id/visits/:id", {}, {
       update: {method: "PUT"}
     });
   }
