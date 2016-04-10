@@ -33,6 +33,7 @@
           vm.activeLabs.bmps = BmpFactory.query({patient_id: vm.activePatient.id, visit_id: data[0].id})
             .$promise.then(function(data){vm.activeLabs.bmp = data[0];});
           vm.activeLatestVisit = data[0];
+          console.log(vm.activeLatestVisit);
         } else {
           vm.activeLatestVisit = null;
         }

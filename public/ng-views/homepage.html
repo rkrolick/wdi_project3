@@ -6,6 +6,7 @@
         <button type="button" id="patientButton" class="btn btn-primary activeButton btn-lg col-md-10" ng-click="vm.active=$index ; vm.setActivePatient(patient)">
           <img src="https://pixabay.com/static/uploads/photo/2015/07/23/13/09/medicine-856933_960_720.png" class="pill" alt="" />{{patient.lastName}}
         </button>
+
       </div>
     </div>
 
@@ -78,6 +79,12 @@
       </div>
     </div>
     <img class="logo" src="/assets/TDB_Logo.png" alt="logo"/>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h2 ng-if="vm.activeLatestVisit.imaging">Imaging: <h3>{{vm.activeLatestVisit.imaging}}</h3></h2>
+        <h2 ng-if="vm.activeLatestVisit.assessmentPlan">Assessment: <h3>{{vm.activeLatestVisit.assessmentPlan}}</h3></h2>
+    </div>
   </div>
 
   <div class="row">
