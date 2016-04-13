@@ -5,6 +5,7 @@
       <div type="button" class="col-md-8 col-md-offset-2 middle_container nav">
         <h1>Visit {{vm.visits.length - $index}}</h1>
 
+          <!-- NHO: recommend some more semantic names for these block variables  -->
           <table class="table table-striped" ng-repeat="(key,value) in visit" ng-if="value">
             <tr class="rows">
               <td class="keys">{{key | camelCaseToHuman }}:</td>

@@ -1,8 +1,9 @@
 class PatientsController < ApplicationController
+  # NHO: again, here could use a before action to call a method that looks up the patient to save repetitive queries
   def index
       @patients = Patient.all
       respond_to do |format|
-        format.html
+        format.html # NHO: while this works because Rails is smart enough, recommend explictly rendering something
         format.json{ render json: @patients}
       end
   end

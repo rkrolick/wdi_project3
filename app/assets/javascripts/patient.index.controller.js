@@ -26,6 +26,8 @@
       vm.activePatient = pat;
       vm.visits = VisitFactory.query({patient_id: vm.activePatient.id}).$promise.then(function(data){
         if (data.length > 0) {
+          // NHO: feel like we can move some of the heavy lifting of database queries to the back-end ->
+          // maybe, each `visit` includes information about all its `labs`
           vm.activeLabs.cbcs = CbcFactory.query({patient_id: vm.activePatient.id, visit_id: data[0].id})
             .$promise.then(function(data){vm.activeLabs.cbc = data[0];});
           vm.activeLabs.ptptts = PtpttFactory.query({patient_id: vm.activePatient.id, visit_id: data[0].id})
@@ -41,6 +43,7 @@
     };
 
     vm.init = function(){
+      // NHO: since we are already querying the DB here, why not set vm.patients here as well
       var p = PatientFactory.query().$promise.then(function(data){
         vm.setActivePatient(data[0]);
       })

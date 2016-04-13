@@ -13,6 +13,7 @@
 
     this.create = function(){
       this.patient.$save();
+      // NHO: think you want this to happen only after the previous asynch save action has completed...
       $state.go("Home", {}, {reload: true});
     }
   }
