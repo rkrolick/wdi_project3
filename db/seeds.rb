@@ -1,3 +1,5 @@
+# NHO: them seeds though
+
 Patient.destroy_all
 Visit.destroy_all
 Vital.destroy_all

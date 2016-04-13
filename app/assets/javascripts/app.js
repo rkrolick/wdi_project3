@@ -1,6 +1,8 @@
 //= require angular
 //= require angular-resource
 //= require angular-ui-router.min
+
+// NHO: good place for a code comment -> also would recommend a semantic name for this module
 window.nameofmodule = require('angular-camelcase-to-human')
 "use strict";
 

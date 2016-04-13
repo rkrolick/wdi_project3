@@ -1,4 +1,6 @@
 class BmpsController < ApplicationController
+  # NHO: could DRY up your code with a before_action call. i.e.:
+  before_action :get_visit
   def index
     get_visit
     @bmps = @visit.bmps.all

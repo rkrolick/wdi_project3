@@ -1,4 +1,5 @@
 class VisitsController < ApplicationController
+  # NHO: before_action :get_patient
   def index
     get_patient
     @visits = @patient.visits.all
@@ -8,7 +9,8 @@ class VisitsController < ApplicationController
   def show
     get_patient
     @visit = @patient.visits.find(params[:id])
-    render json: @visit.to_json, status: :ok
+    # NHO: following up from my comment in the index controller in angular, we can include attribtues of child models like:
+    render json: @visit.to_json(include: [:vitals, :rxs, :ptptts, :dxs, :cbcs]), status: :ok
   end
 
   def create
