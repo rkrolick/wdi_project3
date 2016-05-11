@@ -296,7 +296,7 @@ mohammed = Patient.create({
     alcohol: false,
     drugs: false,
     psychHx: "none",
-    occupation: "Bitch"
+    occupation: "housewife"
     })
 
     sheila.visits.create({
