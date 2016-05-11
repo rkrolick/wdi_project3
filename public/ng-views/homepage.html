@@ -1,6 +1,8 @@
 <div class="container" ng-init="vm.init()">
   <div class="row">
 
+    <!--Sidebar with patient names including selected pt indicator-->
+
     <div class="col-md-3 btn-group-vertical" role="group">
       <div class="row" ng-repeat="patient in vm.patients">
         <button type="button" id="patientButton" class="btn btn-primary activeButton btn-lg col-md-10" ng-click="vm.active=$index ; vm.setActivePatient(patient)">
@@ -9,6 +11,7 @@
       </div>
     </div>
 
+    <!--Patient info----------------------------------------------------->
     <div class="col-md-6 middle_container nav">
       <table class="table table-striped">
         <tr>
@@ -56,6 +59,7 @@
       </table>
     </div>
 
+    <!-- nav/CRUD links and link to expanded view--------------------->
     <div class="col-md-3" >
       <div class="btn-group-vertical" role="group">
         <button type="button" ui-sref="Create" class="btn btn-primary btn-lg" id="activeButton" ng-click="">
@@ -79,6 +83,8 @@
     </div>
     <img class="logo" src="/assets/TDB_Logo.png" alt="logo"/>
   </div>
+
+  <!--lab values------------------------------------------->
 
   <div class="row">
     <div class="BMP col-md-8 col-md-offset-2">

@@ -18,8 +18,8 @@ mohammed = Patient.create({
   age: 28,
   allergies: "none",
   diet: "Normal",
-  nextOfKin: "Allah",
-  nextOfKinPhoneNumber: "1-800-dial-brown-jesus",
+  nextOfKin: "Father",
+  nextOfKinPhoneNumber: "1-800-dial-mom",
   isolation: "Contact",
   pmh: ["I10", "E11", "E78"],
   homeMeds: ["Lisinopril 20 mg PO QD", "Simvastatin 10 mg PO QD", "Metformin 500 mg PO BID"],
@@ -71,7 +71,7 @@ mohammed = Patient.create({
     mohammed.visits.create({
       imaging: "",
       otherProcedures: "Lumbar Puncture today, waiting on CSF analysis",
-      chiefComplaint: "Hard nodule on shaft of penis",
+      chiefComplaint: "Headache",
        loc: "",
        gcs: "",
        neuroNotes: "Patient is AAOx3, no changes in mental status. No weakness or neurological defect other than his inborn one",
@@ -332,7 +332,7 @@ mohammed = Patient.create({
        edema: "",
        pt: "",
        skinNotes: "",
-       assessmentPlan: "causeeee kyles moms a bitch shes a big fat bitch shes the biggest bitch in the whole wide world shes a stupid bitch if tehre ever was a bitch shes a bitch to all the boys an girls"
+       assessmentPlan: "discharge tomorrow"
 
       })
       visitId = sheila.visits.last.id
@@ -434,9 +434,9 @@ mohammed = Patient.create({
     occupation: "4th grade teacher"
     })
     mrgarrison.visits.create({
-      imaging: "Abdominal x-ray shows bowling pin and hamster corpse lodged in sigmoid colon.",
+      imaging: "Abdominal x-ray shows foriegn body lodged in sigmoid colon.",
       otherProcedures: "Surgical intervention necessary",
-      chiefComplaint: "Foreign Body in anus and rectum, initial encounter",
+      chiefComplaint: "Foreign Body , initial encounter",
        loc: "AAOx3",
        gcs: "",
        neuroNotes: "",
