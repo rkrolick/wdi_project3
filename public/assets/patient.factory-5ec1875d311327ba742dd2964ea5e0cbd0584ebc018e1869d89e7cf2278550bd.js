@@ -1,0 +1,1 @@
+"use strict";!function(){function t(t){return t("/patients/:id.json",{},{update:{method:"PUT"}})}angular.module("handOff").factory("PatientFactory",["$resource",t])}();

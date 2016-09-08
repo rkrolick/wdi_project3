@@ -1,0 +1,1 @@
+"use strict";!function(){function r(r){return r("/dx/:query",{},{update:{method:"PUT"}})}angular.module("handOff").factory("ApiFactory",["$resource",r])}();

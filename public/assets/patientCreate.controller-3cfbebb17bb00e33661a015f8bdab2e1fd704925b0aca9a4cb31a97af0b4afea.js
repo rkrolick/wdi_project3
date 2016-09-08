@@ -1,0 +1,1 @@
+!function(){function t(t,e,a){this.patient=new t,this.create=function(){this.patient.$save(),a.go("Home",{},{reload:!0})}}angular.module("handOff").controller("PatientCreateController",["PatientFactory","$stateParams","$state",t])}();

@@ -1,0 +1,1 @@
+"use strict";!function(){function t(t){return t("/patients/:patient_id/visits/:id",{},{update:{method:"PUT"}})}angular.module("handOff").factory("VisitFactory",["$resource",t])}();

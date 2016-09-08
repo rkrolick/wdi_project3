@@ -1,0 +1,1 @@
+"use strict";!function(){function t(t,i){var n=this;n.visits=t.query({patient_id:i.patient_id})}angular.module("handOff").controller("VisitIndexController",["VisitFactory","$stateParams",t])}();
